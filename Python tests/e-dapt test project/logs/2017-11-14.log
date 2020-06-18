@@ -1,0 +1,363 @@
+2017-11-14 20:47:34.9446 ERROR CommandLineClient: Cannot send command line arguments System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:55555
+   в System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   в System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   в e_dapt.Core.Services.CommandLine.CommandLineClient.SendCommandLineArgs(Int32 port, List`1 args)
+2017-11-14 20:47:51.5638 INFO Settings provider - start initialization 
+2017-11-14 20:47:51.5950 INFO Settings provider - GetDomains 
+2017-11-14 20:47:51.6107 INFO Settings provider - config.json content: 
+, {
+    "DEV": {
+        "Domains": "botf03.net,e-dapt.net,",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "OAuth": {
+                "Gate": "proxy",
+                "Path":  "/forwardOAuth2"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 4440,
+                "Trust": "trust_cert",
+                "Host": "dev.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 4440,
+                "Trust": "trust_cert",
+                "Host": "dev.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+
+    "DEMO": {
+        "Domains": "e-dapt.net",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "demo.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "demo.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+
+    "Zurich": {
+        "Domains": "amer.zurich.corp",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "demo.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "51mapspocgateway.zurichna.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "FMR": {
+        "Domains": "dmn1.fmr.com",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "vl51mapsint.fmr.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "vl51mapsint.fmr.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "BBG": {
+        "Domains": "bbgmanagement.local",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "bbg.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "bbg.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "AB": {
+        "Domains": "ac.lp.acml.com",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edaptpilot.alliancebernstein.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edaptpilot.alliancebernstein.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "BARCLAYS": {
+        "Domains": "intranet.barcapint.com",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edapt.barclays.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edapt.barclays.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "ACCENTURE": {
+        "Domains": "acpo.local",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            },
+            "OAuth": {
+                "Gate": "proxy",
+                "Path":  "/forwardOAuth2"
+            }
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "analyticsappcatalogtest.accenture.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "analyticsappcatalogtest.accenture.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "UAT": {
+        "Domains": "e-dapt.net",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "uat.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "uat.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    }
+}
+ 
+2017-11-14 20:47:51.6640 INFO Settings provider - domain token: botf03.net,e-dapt.net, 
+2017-11-14 20:47:51.6640 INFO Settings provider - trying to parse domains 
+2017-11-14 20:47:51.6796 INFO Settings provider - domains parsed: botf03.net,e-dapt.net, 
+2017-11-14 20:47:57.9229 TRACE Run startup tasks 
+2017-11-14 20:47:57.9385 TRACE Clear Browser Cache 
+2017-11-14 20:47:57.9541 TRACE Start clearing browser cache 
+2017-11-14 20:47:58.0231 TRACE Reset clearBrowserCache flag 
+2017-11-14 20:47:58.0231 TRACE Add global exception filter 
+2017-11-14 20:47:58.0388 TRACE Set server certificate validation callback 
+2017-11-14 20:47:58.0544 TRACE Load dynamic resources 
+2017-11-14 20:47:58.0750 TRACE Load brushes from C:\Users\Guest-user\AppData\Local\51maps\e-dapt\brushes-accenture.json 
+2017-11-14 20:47:58.1234 TRACE Disable TLS 1.0 support 
+2017-11-14 20:47:58.1390 TRACE Add assembly load hook 
+2017-11-14 20:47:58.1547 TRACE Show main window 
+2017-11-14 20:47:58.1768 TRACE Start main window view model initialization 
+2017-11-14 20:47:58.1924 TRACE Start content view model initialization 
+2017-11-14 20:47:58.2080 TRACE Initialize stratum service 
+2017-11-14 20:47:58.2237 TRACE Initialize navigation modules registry 
+2017-11-14 20:47:58.7250 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.documentbrowser 
+2017-11-14 20:47:58.7406 DEBUG Assembly Hook: Assembly e-dapt.documentbrowser found in C:\Users\Guest-user\AppData\Local\51maps\e-dapt\Modules\e-dapt.DocumentBrowser.dll 
+2017-11-14 20:47:58.7563 TRACE Initialize login modules registry 
+2017-11-14 20:47:58.7779 TRACE Initialize session key provider 
+2017-11-14 20:47:58.7779 TRACE Initialize background modules registry 
+2017-11-14 20:47:58.7939 TRACE Initialize menu view model 
+2017-11-14 20:47:58.8408 TRACE Get initial stratum 
+2017-11-14 20:47:59.1793 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.core.xmlserializers 
+2017-11-14 20:47:59.1793 DEBUG Assembly Hook: Assembly e-dapt.core.xmlserializers not found 
+2017-11-14 20:47:59.1950 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.core.xmlserializers 
+2017-11-14 20:47:59.2106 DEBUG Assembly Hook: Assembly e-dapt.core.xmlserializers not found 
+2017-11-14 20:47:59.2871 INFO CommandLineServer: Args queued: --disable-background-networking 
+2017-11-14 20:47:59.3001 INFO CommandLineServer: Args queued: --disable-browser-side-navigation 
+2017-11-14 20:47:59.3161 INFO CommandLineServer: Args queued: --disable-client-side-phishing-detection 
+2017-11-14 20:47:59.3301 INFO CommandLineServer: Args queued: --disable-default-apps 
+2017-11-14 20:47:59.3422 INFO CommandLineServer: Args queued: --disable-hang-monitor 
+2017-11-14 20:47:59.3535 INFO CommandLineServer: Args queued: --disable-popup-blocking 
+2017-11-14 20:47:59.3660 INFO CommandLineServer: Args queued: --disable-prompt-on-repost 
+2017-11-14 20:47:59.3660 INFO CommandLineServer: Args queued: --disable-sync 
+2017-11-14 20:47:59.3895 INFO CommandLineServer: Args queued: --disable-web-resources 
+2017-11-14 20:47:59.4015 INFO CommandLineServer: Args queued: --enable-automation 
+2017-11-14 20:47:59.4125 INFO CommandLineServer: Args queued: --enable-logging 
+2017-11-14 20:47:59.4125 INFO CommandLineServer: Args queued: --force-fieldtrials=SiteIsolationExtensions/Control 
+2017-11-14 20:47:59.4355 INFO CommandLineServer: Args queued: --ignore-certificate-errors 
+2017-11-14 20:47:59.4475 INFO CommandLineServer: Args queued: --load-extension=C:\Users\GUEST-~1\AppData\Local\Temp\scoped_dir8672_28533\internal 
+2017-11-14 20:47:59.4595 INFO CommandLineServer: Args queued: --log-level=0 
+2017-11-14 20:47:59.4595 INFO CommandLineServer: Args queued: --metrics-recording-only 
+2017-11-14 20:47:59.4826 INFO CommandLineServer: Args queued: --no-first-run 
+2017-11-14 20:47:59.4946 INFO CommandLineServer: Args queued: --password-store=basic 
+2017-11-14 20:47:59.5066 INFO CommandLineServer: Args queued: --remote-debugging-port=12836 
+2017-11-14 20:47:59.5066 INFO CommandLineServer: Args queued: --safebrowsing-disable-auto-update 
+2017-11-14 20:47:59.5306 INFO CommandLineServer: Args queued: --test-type=webdriver 
+2017-11-14 20:47:59.5426 INFO CommandLineServer: Args queued: --use-mock-keychain 
+2017-11-14 20:47:59.5536 INFO CommandLineServer: Args queued: --user-data-dir=C:\Users\GUEST-~1\AppData\Local\Temp\scoped_dir8672_20184 
+2017-11-14 20:47:59.5536 INFO CommandLineServer: Args queued: data:, 
+2017-11-14 20:47:59.5781 INFO CommandLineServer: Started 
+2017-11-14 20:47:59.5916 TRACE Register gesture handlers 
+2017-11-14 20:47:59.6047 TRACE Startup tasks completed 

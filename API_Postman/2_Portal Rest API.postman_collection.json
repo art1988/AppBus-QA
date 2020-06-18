@@ -1,0 +1,898 @@
+{
+	"info": {
+		"_postman_id": "91a11107-4590-4735-9159-e0b55016b7d0",
+		"name": "Portal Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "{{URL}}/edapt-admin/rest/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userName\":\"bautruk\",\n\t\"domain\":\"botf03.net\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userName\":\"bautruk1\",\n\t\"domain\":\"botf03.net\",\n\t\"lastName\":\"Bautrukevich\",\n\t\"firstName\":\"Ivan\",\n\t\"ldapGroups\": [\n    \"ReportingGroup {d483ab7f-dd3b-4482-934b-324046850337}\",\n    \"UserGroup {074024de-77cd-4503-80e8-fc19534b5974}\"\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users"
+							]
+						},
+						"description": "all parameters"
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/users/1117",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users/1107",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users",
+								"1107"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/users/domains",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users/domains",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users",
+								"domains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/users/groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users/groups",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/users/groups",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\":\"UniqueName\",\r\n  \"description\":\"Description\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users/groups",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/users/groups/50",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users/groups/50",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users",
+								"groups",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/users/groups/assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"groupId\":51,\r\n  \"userId\":1108\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users/groups/assignments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users",
+								"groups",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/users/groups/assignment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"groupId\":51,\r\n  \"userId\":1108\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/users/groups/assignment",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"users",
+								"groups",
+								"assignment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "policies",
+			"item": [
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/policies?policyType=Device",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/policies?policyType=Device",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"policies"
+							],
+							"query": [
+								{
+									"key": "policyType",
+									"value": "Device"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/policies/assignments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/policies/assignments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"policies",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/policies/assignments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"policyName\":\"_property_edit\",\r\n\t\"policyValue\": [\"13456\", \"454\"],\r\n\t\"applicationName\": \"edge\",\r\n\t\"userGroupName\": \"111\",\r\n        \"userName\": \"\",\r\n        \"ldapGroup\": \"\",\r\n\t\"osType\":\"IOS\",\r\n\t\"osVersion\":\"12.0.1\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/policies/assignments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"policies",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/policies/assignments/149",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/policies/assignments/149",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"policies",
+								"assignments",
+								"149"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "navigation",
+			"item": [
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/controllers/types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/controllers/types",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"controllers",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/contexts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/contexts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"contexts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/items/search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"a\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/items/search",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"items",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/items",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"id\": \"ivan_2_title_61\",\n\"displayTitle\": \"ivan_2_displayTitle\",\n\"controllerType\": \"WEB\",\n\"description\": \"ivan_2_description\",\n\"icon\": \"ivan_2_icon\",\n\"entitlement\": \"ivan_2_entitlement\",\n\"contexts\": [\"symbol\", \"client\"],\n\"tags\": [\"aaa\", \"bbb\"],\n\"navigationProperties\": {\n\t\"111222333\" : [\"1\", \"2\"]\n},\n\"controllerProperties\": {\n\t\"url\" : \"fdv\"\n}\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/items",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"profileName\": \"dfvdfv\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/groups",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/devices/types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/devices/types",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"devices",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/applications",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/os/types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/os/types",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"os",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/profiles",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/profiles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"testtest\",\n\t\"description\":\"description\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/profiles",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/profiles/testtest",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"testtest\",\n\t\"description\":\"description\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/profiles/testtest",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"profiles",
+								"testtest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/profiles/groups/items/assignments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"profileName\" : \"Accenture2\",\n\t\"groupName\" : \"bottomFixedGroup\",\n\t\"itemId\" : \"ivan_2_title_42\",\n\t\"parentFolderId\": 3440\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/profiles/groups/items/assignments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"profiles",
+								"groups",
+								"items",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/profiles/tree/Accenture2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/profiles/tree/Accenture2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"profiles",
+								"tree",
+								"Accenture2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/profiles/groups/items/assignments/11670",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"profileName\" : \"Accenture2\",\n\t\"groupName\" : \"bottomFixedGroup\",\n\t\"itemId\" : \"ivan_2_title_42\",\n\t\"parentFolderId\": 3440\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/profiles/groups/items/assignments/11670",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"profiles",
+								"groups",
+								"items",
+								"assignments",
+								"11670"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/profiles/groups/assignments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"profileName\" : \"AppBusQA\",\n\t\"groupName\" : \"floatingGroup\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/profiles/groups/assignments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"profiles",
+								"groups",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}/edapt-admin/rest/navigation/profiles/tree/testtest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"profileName\" : \"testtest\",\n\t\"groupName\" : \"bottomFixedGroup\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/edapt-admin/rest/navigation/profiles/tree/testtest",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"edapt-admin",
+								"rest",
+								"navigation",
+								"profiles",
+								"tree",
+								"testtest"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

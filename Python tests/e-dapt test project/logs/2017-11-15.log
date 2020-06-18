@@ -1,0 +1,1691 @@
+2017-11-15 12:07:25.2826 ERROR CommandLineClient: Cannot send command line arguments System.Net.Sockets.SocketException (0x80004005): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:55555
+   в System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   в System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   в e_dapt.Core.Services.CommandLine.CommandLineClient.SendCommandLineArgs(Int32 port, List`1 args)
+2017-11-15 12:07:40.9347 INFO Settings provider - start initialization 
+2017-11-15 12:07:40.9733 INFO Settings provider - GetDomains 
+2017-11-15 12:07:40.9954 INFO Settings provider - config.json content: 
+, {
+    "DEV": {
+        "Domains": "botf03.net,e-dapt.net,",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "OAuth": {
+                "Gate": "proxy",
+                "Path":  "/forwardOAuth2"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 4440,
+                "Trust": "trust_cert",
+                "Host": "dev.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 4440,
+                "Trust": "trust_cert",
+                "Host": "dev.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+
+    "DEMO": {
+        "Domains": "e-dapt.net",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "demo.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "demo.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+
+    "Zurich": {
+        "Domains": "amer.zurich.corp",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "demo.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "51mapspocgateway.zurichna.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "FMR": {
+        "Domains": "dmn1.fmr.com",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "vl51mapsint.fmr.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "vl51mapsint.fmr.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "BBG": {
+        "Domains": "bbgmanagement.local",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "bbg.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "bbg.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "AB": {
+        "Domains": "ac.lp.acml.com",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edaptpilot.alliancebernstein.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edaptpilot.alliancebernstein.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "BARCLAYS": {
+        "Domains": "intranet.barcapint.com",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edapt.barclays.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edapt.barclays.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "ACCENTURE": {
+        "Domains": "acpo.local",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            },
+            "OAuth": {
+                "Gate": "proxy",
+                "Path":  "/forwardOAuth2"
+            }
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "analyticsappcatalogtest.accenture.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "analyticsappcatalogtest.accenture.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "UAT": {
+        "Domains": "e-dapt.net",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "uat.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "uat.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    }
+}
+ 
+2017-11-15 12:07:41.0434 INFO Settings provider - domain token: botf03.net,e-dapt.net, 
+2017-11-15 12:07:41.0544 INFO Settings provider - trying to parse domains 
+2017-11-15 12:07:41.0544 INFO Settings provider - domains parsed: botf03.net,e-dapt.net, 
+2017-11-15 12:07:47.5207 TRACE Run startup tasks 
+2017-11-15 12:07:47.5357 TRACE Clear Browser Cache 
+2017-11-15 12:07:47.5487 TRACE Start clearing browser cache 
+2017-11-15 12:07:47.6448 TRACE Reset clearBrowserCache flag 
+2017-11-15 12:07:47.6598 TRACE Add global exception filter 
+2017-11-15 12:07:47.6728 TRACE Set server certificate validation callback 
+2017-11-15 12:07:47.6878 TRACE Load dynamic resources 
+2017-11-15 12:07:47.6993 TRACE Load brushes from C:\Users\Guest-user\AppData\Local\51maps\e-dapt\brushes-accenture.json 
+2017-11-15 12:07:47.7579 TRACE Disable TLS 1.0 support 
+2017-11-15 12:07:47.7739 TRACE Add assembly load hook 
+2017-11-15 12:07:47.7879 TRACE Show main window 
+2017-11-15 12:07:47.8129 TRACE Start main window view model initialization 
+2017-11-15 12:07:47.8299 TRACE Start content view model initialization 
+2017-11-15 12:07:47.8430 TRACE Initialize stratum service 
+2017-11-15 12:07:47.8580 TRACE Initialize navigation modules registry 
+2017-11-15 12:07:48.4213 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.documentbrowser 
+2017-11-15 12:07:48.4333 DEBUG Assembly Hook: Assembly e-dapt.documentbrowser found in C:\Users\Guest-user\AppData\Local\51maps\e-dapt\Modules\e-dapt.DocumentBrowser.dll 
+2017-11-15 12:07:48.4523 TRACE Initialize login modules registry 
+2017-11-15 12:07:48.4643 TRACE Initialize session key provider 
+2017-11-15 12:07:48.4793 TRACE Initialize background modules registry 
+2017-11-15 12:07:48.4923 TRACE Initialize menu view model 
+2017-11-15 12:07:48.5451 TRACE Get initial stratum 
+2017-11-15 12:07:48.8923 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.core.xmlserializers 
+2017-11-15 12:07:48.9049 DEBUG Assembly Hook: Assembly e-dapt.core.xmlserializers not found 
+2017-11-15 12:07:48.9182 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.core.xmlserializers 
+2017-11-15 12:07:48.9302 DEBUG Assembly Hook: Assembly e-dapt.core.xmlserializers not found 
+2017-11-15 12:07:49.0047 INFO CommandLineServer: Args queued: --disable-background-networking 
+2017-11-15 12:07:49.0183 INFO CommandLineServer: Args queued: --disable-browser-side-navigation 
+2017-11-15 12:07:49.0373 INFO CommandLineServer: Args queued: --disable-client-side-phishing-detection 
+2017-11-15 12:07:49.0523 INFO CommandLineServer: Args queued: --disable-default-apps 
+2017-11-15 12:07:49.0653 INFO CommandLineServer: Args queued: --disable-hang-monitor 
+2017-11-15 12:07:49.0763 INFO CommandLineServer: Args queued: --disable-popup-blocking 
+2017-11-15 12:07:49.0893 INFO CommandLineServer: Args queued: --disable-prompt-on-repost 
+2017-11-15 12:07:49.1023 INFO CommandLineServer: Args queued: --disable-sync 
+2017-11-15 12:07:49.1023 INFO CommandLineServer: Args queued: --disable-web-resources 
+2017-11-15 12:07:49.1263 INFO CommandLineServer: Args queued: --enable-automation 
+2017-11-15 12:07:49.1393 INFO CommandLineServer: Args queued: --enable-logging 
+2017-11-15 12:07:49.1514 INFO CommandLineServer: Args queued: --force-fieldtrials=SiteIsolationExtensions/Control 
+2017-11-15 12:07:49.1644 INFO CommandLineServer: Args queued: --ignore-certificate-errors 
+2017-11-15 12:07:49.1644 INFO CommandLineServer: Args queued: --load-extension=C:\Users\GUEST-~1\AppData\Local\Temp\scoped_dir9580_23370\internal 
+2017-11-15 12:07:49.1894 INFO CommandLineServer: Args queued: --log-level=0 
+2017-11-15 12:07:49.2029 INFO CommandLineServer: Args queued: --metrics-recording-only 
+2017-11-15 12:07:49.2164 INFO CommandLineServer: Args queued: --no-first-run 
+2017-11-15 12:07:49.2284 INFO CommandLineServer: Args queued: --password-store=basic 
+2017-11-15 12:07:49.2284 INFO CommandLineServer: Args queued: --remote-debugging-port=12845 
+2017-11-15 12:07:49.2534 INFO CommandLineServer: Args queued: --safebrowsing-disable-auto-update 
+2017-11-15 12:07:49.2664 INFO CommandLineServer: Args queued: --test-type=webdriver 
+2017-11-15 12:07:49.2785 INFO CommandLineServer: Args queued: --use-mock-keychain 
+2017-11-15 12:07:49.2905 INFO CommandLineServer: Args queued: --user-data-dir=C:\Users\GUEST-~1\AppData\Local\Temp\scoped_dir9580_27767 
+2017-11-15 12:07:49.3035 INFO CommandLineServer: Args queued: data:, 
+2017-11-15 12:07:49.3035 INFO CommandLineServer: Started 
+2017-11-15 12:07:49.3305 TRACE Register gesture handlers 
+2017-11-15 12:07:49.3435 TRACE Startup tasks completed 
+2017-11-15 12:07:52.7573 TRACE Run shutdown tasks 
+2017-11-15 12:07:52.8323 TRACE DoubleProxyWrapper: stopping proxy 
+2017-11-15 12:07:52.8463 TRACE DoubleProxyWrapper: proxy stopped 
+2017-11-15 12:07:52.8604 TRACE Shutdown tasks completed 
+2017-11-15 12:08:23.5968 INFO Settings provider - start initialization 
+2017-11-15 12:08:23.6281 INFO Settings provider - GetDomains 
+2017-11-15 12:08:23.6437 INFO Settings provider - config.json content: 
+, {
+    "DEV": {
+        "Domains": "botf03.net,e-dapt.net,",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "OAuth": {
+                "Gate": "proxy",
+                "Path":  "/forwardOAuth2"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 4440,
+                "Trust": "trust_cert",
+                "Host": "dev.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 4440,
+                "Trust": "trust_cert",
+                "Host": "dev.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+
+    "DEMO": {
+        "Domains": "e-dapt.net",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "demo.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "demo.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+
+    "Zurich": {
+        "Domains": "amer.zurich.corp",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "demo.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "51mapspocgateway.zurichna.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "FMR": {
+        "Domains": "dmn1.fmr.com",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "vl51mapsint.fmr.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "vl51mapsint.fmr.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "BBG": {
+        "Domains": "bbgmanagement.local",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "bbg.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "bbg.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "AB": {
+        "Domains": "ac.lp.acml.com",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edaptpilot.alliancebernstein.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edaptpilot.alliancebernstein.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "BARCLAYS": {
+        "Domains": "intranet.barcapint.com",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edapt.barclays.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "edapt.barclays.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "ACCENTURE": {
+        "Domains": "acpo.local",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            },
+            "OAuth": {
+                "Gate": "proxy",
+                "Path":  "/forwardOAuth2"
+            }
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "analyticsappcatalogtest.accenture.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "analyticsappcatalogtest.accenture.com"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "UAT": {
+        "Domains": "e-dapt.net",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "uat.e-dapt.net"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "uat.e-dapt.net"
+            }
+        },
+        "Certificates": {
+        }
+    },
+    "JPMC": {
+        "Domains": "botf03.net",
+        "Version": "local",
+        "StartTime": 1425184300000,
+        "Services": {
+            "default": {
+                "Gate": "proxy",
+                "Path": "/forwardurl"
+            },
+            "MainLogin": {
+                "Gate": "login",
+                "Path": "/proxy/authentication/login"
+            }
+
+        },
+        "Gateways": {
+            "proxy": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "jpmc-1.e-dapt.com"
+            },
+            "login": {
+                "Client": "proxy_client_cert",
+                "Port": 443,
+                "Trust": "trust_cert",
+                "Host": "jpmc-1.e-dapt.com"
+            }
+        },
+        "Certificates": {
+        }
+    }
+}
+ 
+2017-11-15 12:08:23.6977 INFO Settings provider - domain token: botf03.net,e-dapt.net, 
+2017-11-15 12:08:23.6977 INFO Settings provider - trying to parse domains 
+2017-11-15 12:08:23.7185 INFO Settings provider - domains parsed: botf03.net,e-dapt.net, 
+2017-11-15 12:08:24.8670 TRACE Run startup tasks 
+2017-11-15 12:08:24.8670 TRACE Clear Browser Cache 
+2017-11-15 12:08:24.8875 TRACE Add global exception filter 
+2017-11-15 12:08:24.8875 TRACE Set server certificate validation callback 
+2017-11-15 12:08:24.9031 TRACE Load dynamic resources 
+2017-11-15 12:08:24.9187 TRACE Load brushes from C:\Users\Guest-user\Documents\Debug-5\brushes-accenture.json 
+2017-11-15 12:08:24.9656 TRACE Disable TLS 1.0 support 
+2017-11-15 12:08:24.9877 TRACE Add assembly load hook 
+2017-11-15 12:08:25.0034 TRACE Show main window 
+2017-11-15 12:08:25.0190 TRACE Start main window view model initialization 
+2017-11-15 12:08:25.0346 TRACE Start content view model initialization 
+2017-11-15 12:08:25.0346 TRACE Initialize stratum service 
+2017-11-15 12:08:25.0502 TRACE Initialize navigation modules registry 
+2017-11-15 12:08:25.0825 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.documentbrowser 
+2017-11-15 12:08:25.0880 DEBUG Assembly Hook: Assembly e-dapt.documentbrowser found in C:\Users\Guest-user\Documents\Debug-5\Modules\e-dapt.DocumentBrowser.dll 
+2017-11-15 12:08:25.1036 TRACE Initialize login modules registry 
+2017-11-15 12:08:25.1036 TRACE Initialize session key provider 
+2017-11-15 12:08:25.1193 TRACE Initialize background modules registry 
+2017-11-15 12:08:25.1349 TRACE Initialize menu view model 
+2017-11-15 12:08:25.1878 TRACE Get initial stratum 
+2017-11-15 12:08:25.4855 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.core.xmlserializers 
+2017-11-15 12:08:25.4855 DEBUG Assembly Hook: Assembly e-dapt.core.xmlserializers not found 
+2017-11-15 12:08:25.5041 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.core.xmlserializers 
+2017-11-15 12:08:25.5041 DEBUG Assembly Hook: Assembly e-dapt.core.xmlserializers not found 
+2017-11-15 12:08:25.5855 INFO CommandLineServer: Args queued: --disable-background-networking 
+2017-11-15 12:08:25.5855 INFO CommandLineServer: Args queued: --disable-browser-side-navigation 
+2017-11-15 12:08:25.6135 INFO CommandLineServer: Args queued: --disable-client-side-phishing-detection 
+2017-11-15 12:08:25.6265 INFO CommandLineServer: Args queued: --disable-default-apps 
+2017-11-15 12:08:25.6385 INFO CommandLineServer: Args queued: --disable-hang-monitor 
+2017-11-15 12:08:25.6495 INFO CommandLineServer: Args queued: --disable-popup-blocking 
+2017-11-15 12:08:25.6495 INFO CommandLineServer: Args queued: --disable-prompt-on-repost 
+2017-11-15 12:08:25.6731 INFO CommandLineServer: Args queued: --disable-sync 
+2017-11-15 12:08:25.6849 INFO CommandLineServer: Args queued: --disable-web-resources 
+2017-11-15 12:08:25.6964 INFO CommandLineServer: Args queued: --enable-automation 
+2017-11-15 12:08:25.6964 INFO CommandLineServer: Args queued: --enable-logging 
+2017-11-15 12:08:25.7196 INFO CommandLineServer: Args queued: --force-fieldtrials=SiteIsolationExtensions/Control 
+2017-11-15 12:08:25.7306 INFO CommandLineServer: Args queued: --ignore-certificate-errors 
+2017-11-15 12:08:25.7426 INFO CommandLineServer: Args queued: --load-extension=C:\Users\GUEST-~1\AppData\Local\Temp\scoped_dir11540_543\internal 
+2017-11-15 12:08:25.7426 INFO CommandLineServer: Args queued: --log-level=0 
+2017-11-15 12:08:25.7657 INFO CommandLineServer: Args queued: --metrics-recording-only 
+2017-11-15 12:08:25.7777 INFO CommandLineServer: Args queued: --no-first-run 
+2017-11-15 12:08:25.7887 INFO CommandLineServer: Args queued: --password-store=basic 
+2017-11-15 12:08:25.7887 INFO CommandLineServer: Args queued: --remote-debugging-port=12962 
+2017-11-15 12:08:25.8127 INFO CommandLineServer: Args queued: --safebrowsing-disable-auto-update 
+2017-11-15 12:08:25.8237 INFO CommandLineServer: Args queued: --test-type=webdriver 
+2017-11-15 12:08:25.8357 INFO CommandLineServer: Args queued: --use-mock-keychain 
+2017-11-15 12:08:25.8357 INFO CommandLineServer: Args queued: --user-data-dir=C:\Users\GUEST-~1\AppData\Local\Temp\scoped_dir11540_18594 
+2017-11-15 12:08:25.8587 INFO CommandLineServer: Args queued: data:, 
+2017-11-15 12:08:25.8707 INFO CommandLineServer: Started 
+2017-11-15 12:08:25.8832 TRACE Register gesture handlers 
+2017-11-15 12:08:25.8832 TRACE Startup tasks completed 
+2017-11-15 12:08:35.8667 TRACE DoubleProxyWrapper: stopping proxy 
+2017-11-15 12:08:35.8667 TRACE DoubleProxyWrapper: proxy stopped 
+2017-11-15 12:08:35.8917 INFO DoubleProxyWrapper: Initialize proxy 
+2017-11-15 12:08:35.9129 INFO DoubleProxyWrapper: chain proxy not found 
+2017-11-15 12:08:37.1228 TRACE DoubleProxyWrapper: set CA certificate 
+2017-11-15 12:08:37.1869 INFO CA cert installed for Current User: True 
+2017-11-15 12:08:37.1989 INFO CA cert installed for Local Machine: True 
+2017-11-15 12:08:37.2109 TRACE DoubleProxyWrapper: set backend certificate 
+2017-11-15 12:08:37.2109 TRACE DoubleProxyWrapper: set client certificate 
+2017-11-15 12:08:37.2397 TRACE DoubleProxyWrapper: set CA certificate 
+2017-11-15 12:08:37.2647 INFO CA cert installed for Current User: True 
+2017-11-15 12:08:37.2767 INFO CA cert installed for Local Machine: True 
+2017-11-15 12:08:37.2897 TRACE DoubleProxyWrapper: set backend certificate 
+2017-11-15 12:08:37.2897 TRACE DoubleProxyWrapper: set client certificate 
+2017-11-15 12:08:37.3187 TRACE DoubleProxyWrapper: starting proxy 
+2017-11-15 12:08:37.3187 TRACE DoubleProxyWrapper: proxy started 
+2017-11-15 12:08:37.3478 TRACE DoubleProxyWrapper: default web proxy set 
+2017-11-15 12:08:37.3628 TRACE DirectNetworkAvailabilityService.IsNetworkAvailableImplAsync - trying to connect to dev.e-dapt.net:4440 
+2017-11-15 12:08:40.7036 TRACE DirectNetworkAvailabilityService.IsNetworkAvailableImplAsync - connection succeeded 
+2017-11-15 12:08:40.7276 INFO DirectNetworkAvailabilityService.IsNetworkAvailableAsync took 3365 
+2017-11-15 12:08:40.7491 TRACE Request[50789581] created 
+2017-11-15 12:08:40.7603 INFO Request[50789581] added to requests list 
+2017-11-15 12:08:40.7723 INFO Total number of requests in list: 1 
+2017-11-15 12:08:40.7723 TRACE Request[50789581] - header Content-Type set to value application/json 
+2017-11-15 12:08:40.7973 TRACE Sending request to https://dev.e-dapt.net:4440/appver/appver.json 
+2017-11-15 12:08:40.8103 TRACE Request[50789581] - start callback called 
+2017-11-15 12:08:41.7762 TRACE Request[50789581] - completion callback called 
+2017-11-15 12:08:41.8043 TRACE Request[50789581] - finish callback called 
+2017-11-15 12:08:41.8223 INFO Request[50789581] removed from requests list 
+2017-11-15 12:08:41.8223 INFO Total number of requests in list: 0 
+2017-11-15 12:08:41.8497 TRACE Response from https://dev.e-dapt.net:4440/appver/appver.json received 
+2017-11-15 12:08:41.8626 TRACE Request[50789581] disposed 
+2017-11-15 12:08:41.9467 TRACE Request[30480920] created 
+2017-11-15 12:08:41.9467 INFO Request[30480920] added to requests list 
+2017-11-15 12:08:41.9706 INFO Total number of requests in list: 1 
+2017-11-15 12:08:41.9826 TRACE Request[30480920] - header Content-Type set to value application/json 
+2017-11-15 12:08:41.9946 TRACE Request[30480920] - header Content-Length set to value 1068 
+2017-11-15 12:08:42.0076 TRACE Sending request to https://dev.e-dapt.net:4440/proxy/authentication/login 
+2017-11-15 12:08:42.0076 TRACE Request[30480920] - set request body: 
+{"data":"1bW836Wqr/qKnq3Wr+Q9Tf6DmHpHJbSppO78CzRKf5EoakGr8Qb3Zi+Z9q2R+QWzNjFl6FA1sZHoFwKKXZrJioVIlBVJ2Bia6nN2zi3P6FuAVbs/d9Xbe+LExyguFiS2/chntrygUtE/nHcAHp/vetllUT83x1WTpcORqTECQbflIM0azzK/7H2ZDP3PtiNF8+NWUNAPbFfM2pMqfPaPGckYjl0RuSgMRUvZPN7wgXfYk2iscITNalItJ0Hh0WcFmuuPodrABcP9qtaG8srdn0kMud7cymog37T/3flNg88ilXCQJsw35Rhzsd2Ra6nLHmujv1gtCH5pbFGy1L8DumN0LTRGBGFu61zOsI34TPGIfDZziWh2T53Od6GFzmUZRaOmv/HC4dJB2BTGTQSY19GCnX1dWedn16/FI6b+Np8+G0hqzVvXn5Q+3dbBHlH7u4hdtnkzZ5usV2FA3edX5MpZL4VOaGGdgce8DBTnKt15WvFZdpYhcZf2lssUaBOu238N52YDotmSOu1SF/MWQvhOll0pgef9f9OuRIir5ZUfD0T5sPjXhrgCwHWdamTYZHPxwsp657bN9qYS1s0g9J/HZU2t8TSfdOscyS3S7TEjV4AImgktLILoAiTclcJ1tzyxsGxR+pi8zH6mrXTy2oxnf3yR22FWdjVijwV/mq8QT59/TH6i5rvueBcXEePE","key":"cr+5PbB3YzFz0CwLdNagHlMKcwPz4IhkU/o4grRnFyLa4WwpDht7sunVmSCEYRczTzmTWZ61FyUzBBWjuLLh0cp9sRYSg67vYxrx7FKSD/twtao42GhAHLtAXie6VaffFxU+iMTmd2IGJRwOOXaWRmDWbOxM36SnSwIgED+hNl5/y4j9inXwVJEp3s0TM47MOUiXJkYkBh01kn+gUznh3eH2X78Cm/Gsq/FIf0zHi0Hcy+Y9iiFjg5v3ydF/8j6JRnUAZfJwIoy/TXODFkLSslYgW7rCLe4Vd+wOSvKV9eK5g1T+DOjWVRRFiLSMEYHmavTogV1sYTiwOLF/GPIIiQ=="} 
+2017-11-15 12:08:42.0326 TRACE Request[30480920] - start callback called 
+2017-11-15 12:08:42.4620 TRACE Request[30480920] - completion callback called 
+2017-11-15 12:08:42.4850 TRACE Request[30480920] - finish callback called 
+2017-11-15 12:08:42.5090 INFO Request[30480920] removed from requests list 
+2017-11-15 12:08:42.5320 INFO Total number of requests in list: 0 
+2017-11-15 12:08:42.5470 TRACE Response from https://dev.e-dapt.net:4440/proxy/authentication/login received 
+2017-11-15 12:08:42.5592 TRACE Request[30480920] disposed 
+2017-11-15 12:08:42.7375 TRACE StratumService: 'Local' stratum requested 
+2017-11-15 12:08:42.7495 TRACE StratumService: 'Local' stratum already granted 
+2017-11-15 12:08:42.7630 TRACE StratumService: 'Basic' stratum requested 
+2017-11-15 12:08:42.7761 INFO StratumService: 'Basic' authentication passed 
+2017-11-15 12:08:42.7881 TRACE DoubleProxyWrapper: header added: X-51MAPS-AuthToken:expires=1510736921&user=exadel1%40botf03.net&issuer=com.maps51&:dL39Yu2nLqoHB6lZz6G8TBQMBmqEqeBfFTBw6tqbwELgAeoCEX+JJfaSPSyjQLyYglqZ7OE+4G0VsM1mWG4vNAaUy9vDxiLLI6sbvHyAptJqj+e1+IYkHvkX72TKVZ/VwzcqMp21XJqCdW9i1zgEDsHBEKzWI6ODxYGZT+QjgJUCs7rqeUrH/7QT9L2obWhRl374BrWz/squJruQvvID8tXINvYEW9C17ujK9C+RdShYuMVmO5gqVfY8lxJjV+q/hPxBmjU8OzPcgvuz7o63TQJKLFRLN0EPQydIwV4y+casDCOoIUusGPTgBrzTGG+PgZjahQKmkyacfN1rqPGSOQ== 
+2017-11-15 12:08:42.7881 TRACE DoubleProxyWrapper: header added: X-51MAPS-SK:Eiap5i5J6DfLOd+cKHghlwe3WB49pztk4vt7elh5r/A= 
+2017-11-15 12:08:42.8131 TRACE StratumService: perform chained login 
+2017-11-15 12:08:42.8241 TRACE StratumService: get 'Exchange' authentication module 
+2017-11-15 12:08:42.8361 TRACE StratumService: try to authenticate 
+2017-11-15 12:08:42.8501 TRACE Request[23825510] created 
+2017-11-15 12:08:42.8501 INFO Request[23825510] added to requests list 
+2017-11-15 12:08:42.8731 INFO Total number of requests in list: 1 
+2017-11-15 12:08:42.8841 TRACE Request[23825510] - header Content-Type set to value application/x-www-form-urlencoded 
+2017-11-15 12:08:42.8841 TRACE Request[23825510] - header Content-Length set to value 38 
+2017-11-15 12:08:42.9071 TRACE Sending request to https://dev.e-dapt.net:4440/exchjson/service/do/login 
+2017-11-15 12:08:42.9182 TRACE Request[23825510] - set request body: 
+jsonSupport=true&RequestId=authStepOne 
+2017-11-15 12:08:42.9292 TRACE Request[23825510] - header X-51MAPS-CredentialsRequired set to value true 
+2017-11-15 12:08:42.9292 TRACE Request[23825510] - start callback called 
+2017-11-15 12:08:43.8061 TRACE Request[23825510] - completion callback called 
+2017-11-15 12:08:43.8301 TRACE Request[23825510] - finish callback called 
+2017-11-15 12:08:43.8556 INFO Request[23825510] removed from requests list 
+2017-11-15 12:08:43.8804 INFO Total number of requests in list: 0 
+2017-11-15 12:08:43.8934 TRACE Response from https://dev.e-dapt.net:4440/exchjson/service/do/login received 
+2017-11-15 12:08:43.9044 TRACE Request[23825510] disposed 
+2017-11-15 12:08:43.9204 TRACE DoubleProxyWrapper: header added: X-51MAPS-AuthToken:expires=1510736921&user=exadel1%40botf03.net&issuer=com.maps51&:dL39Yu2nLqoHB6lZz6G8TBQMBmqEqeBfFTBw6tqbwELgAeoCEX+JJfaSPSyjQLyYglqZ7OE+4G0VsM1mWG4vNAaUy9vDxiLLI6sbvHyAptJqj+e1+IYkHvkX72TKVZ/VwzcqMp21XJqCdW9i1zgEDsHBEKzWI6ODxYGZT+QjgJUCs7rqeUrH/7QT9L2obWhRl374BrWz/squJruQvvID8tXINvYEW9C17ujK9C+RdShYuMVmO5gqVfY8lxJjV+q/hPxBmjU8OzPcgvuz7o63TQJKLFRLN0EPQydIwV4y+casDCOoIUusGPTgBrzTGG+PgZjahQKmkyacfN1rqPGSOQ== 
+2017-11-15 12:08:43.9314 TRACE DoubleProxyWrapper: header added: X-51MAPS-Exchange-AuthToken:8ANwv8oZzbaEHsbZL58PKOVoao4= 
+2017-11-15 12:08:43.9314 TRACE DoubleProxyWrapper: header added: X-51MAPS-SK:Eiap5i5J6DfLOd+cKHghlwe3WB49pztk4vt7elh5r/A= 
+2017-11-15 12:08:44.0030 TRACE CEF requires initialization 
+2017-11-15 12:08:44.0140 TRACE Trying to access C:\Users\Guest-user\Documents\Debug-5\BrowserCache 
+2017-11-15 12:08:44.0260 TRACE C:\Users\Guest-user\Documents\Debug-5\BrowserCache already exists 
+2017-11-15 12:08:44.0260 TRACE Instantiating CefSettings 
+2017-11-15 12:08:44.0505 TRACE Initializing CEF core 
+2017-11-15 12:08:44.0991 TRACE CEF core initialized 
+2017-11-15 12:08:44.1201 TRACE Request[45979426] created 
+2017-11-15 12:08:44.1201 INFO Request[45979426] added to requests list 
+2017-11-15 12:08:44.1331 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.1331 INFO Total number of requests in list: 1 
+2017-11-15 12:08:44.1622 INFO CommandLineServer: Args processed: --disable-background-networking 
+2017-11-15 12:08:44.1752 TRACE Request[45979426] - header Content-Type set to value application/json 
+2017-11-15 12:08:44.1952 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.1952 TRACE Request[45979426] - header Content-Length set to value 86 
+2017-11-15 12:08:44.2202 INFO CommandLineServer: Args processed: --disable-browser-side-navigation 
+2017-11-15 12:08:44.2352 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-service/config/getBinaryConfig 
+2017-11-15 12:08:44.2567 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.2567 TRACE Request[45979426] - set request body: 
+{"name":"AppStyles","component":"DEVICE","version":"89cbf2c93dbdb728654588010ad45ad1"} 
+2017-11-15 12:08:44.2838 INFO CommandLineServer: Args processed: --disable-client-side-phishing-detection 
+2017-11-15 12:08:44.2988 TRACE Request[45979426] - start callback called 
+2017-11-15 12:08:44.3188 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.3483 INFO CommandLineServer: Args processed: --disable-default-apps 
+2017-11-15 12:08:44.3693 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.3863 INFO CommandLineServer: Args processed: --disable-hang-monitor 
+2017-11-15 12:08:44.4074 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.4264 INFO CommandLineServer: Args processed: --disable-popup-blocking 
+2017-11-15 12:08:44.4479 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.4654 INFO CommandLineServer: Args processed: --disable-prompt-on-repost 
+2017-11-15 12:08:44.4874 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.5054 INFO CommandLineServer: Args processed: --disable-sync 
+2017-11-15 12:08:44.5284 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.5465 INFO CommandLineServer: Args processed: --disable-web-resources 
+2017-11-15 12:08:44.5685 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.5875 INFO CommandLineServer: Args processed: --enable-automation 
+2017-11-15 12:08:44.6095 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.6275 INFO CommandLineServer: Args processed: --enable-logging 
+2017-11-15 12:08:44.6495 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.6675 INFO CommandLineServer: Args processed: --force-fieldtrials=SiteIsolationExtensions/Control 
+2017-11-15 12:08:44.6897 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.7077 INFO CommandLineServer: Args processed: --ignore-certificate-errors 
+2017-11-15 12:08:44.7157 TRACE Request[45979426] - completion callback called 
+2017-11-15 12:08:44.7288 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.7438 TRACE Request[45979426] - finish callback called 
+2017-11-15 12:08:44.7608 INFO CommandLineServer: Args processed: --load-extension=C:\Users\GUEST-~1\AppData\Local\Temp\scoped_dir11540_543\internal 
+2017-11-15 12:08:44.7798 INFO Request[45979426] removed from requests list 
+2017-11-15 12:08:44.8018 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.8168 INFO Total number of requests in list: 0 
+2017-11-15 12:08:44.8358 INFO CommandLineServer: Args processed: --log-level=0 
+2017-11-15 12:08:44.8538 TRACE Response from https://dev.e-dapt.net:4440/edapt-service/config/getBinaryConfig received 
+2017-11-15 12:08:44.8769 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.8889 TRACE Request[45979426] disposed 
+2017-11-15 12:08:44.9069 INFO CommandLineServer: Args processed: --metrics-recording-only 
+2017-11-15 12:08:44.9269 TRACE NavigationTreeService: get navigation tree 
+2017-11-15 12:08:44.9459 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:44.9599 DEBUG Start sending request for Navigation Tree 
+2017-11-15 12:08:44.9769 INFO CommandLineServer: Args processed: --no-first-run 
+2017-11-15 12:08:44.9949 TRACE Request[11161650] created 
+2017-11-15 12:08:45.0180 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:45.0320 INFO Request[11161650] added to requests list 
+2017-11-15 12:08:45.0502 INFO CommandLineServer: Args processed: --password-store=basic 
+2017-11-15 12:08:45.0662 INFO Total number of requests in list: 1 
+2017-11-15 12:08:45.0902 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:45.1022 TRACE Request[11161650] - header Content-Type set to value application/json 
+2017-11-15 12:08:45.1192 INFO CommandLineServer: Args processed: --remote-debugging-port=12962 
+2017-11-15 12:08:45.1373 TRACE Request[11161650] - header Content-Length set to value 24 
+2017-11-15 12:08:45.1588 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:45.1708 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-service/navigation/tree 
+2017-11-15 12:08:45.1878 INFO CommandLineServer: Args processed: --safebrowsing-disable-auto-update 
+2017-11-15 12:08:45.2038 TRACE Request[11161650] - set request body: 
+{"sessionLogId":"80163"} 
+2017-11-15 12:08:45.2278 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:45.2429 TRACE Request[11161650] - start callback called 
+2017-11-15 12:08:45.2604 INFO CommandLineServer: Args processed: --test-type=webdriver 
+2017-11-15 12:08:45.2994 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:45.3164 INFO CommandLineServer: Args processed: --use-mock-keychain 
+2017-11-15 12:08:45.3364 ERROR CommandLineServer: Cannot start process System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start()
+   в System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   в System.Diagnostics.Process.Start(String fileName, String arguments)
+   в e_dapt.Core.Services.CommandLine.CommandLineServer.ProcessCommandLine(String input) в C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\CommandLine\CommandLineServer.cs:строка 165
+2017-11-15 12:08:45.3549 INFO CommandLineServer: Args processed: --user-data-dir=C:\Users\GUEST-~1\AppData\Local\Temp\scoped_dir11540_18594 
+2017-11-15 12:08:45.4781 ERROR CommandLineServer: Process data:, started 
+2017-11-15 12:08:45.4961 INFO CommandLineServer: Args processed: data:, 
+2017-11-15 12:08:51.9736 TRACE Request[11161650] - completion callback called 
+2017-11-15 12:08:52.0078 TRACE Request[11161650] - finish callback called 
+2017-11-15 12:08:52.0258 INFO Request[11161650] removed from requests list 
+2017-11-15 12:08:52.0432 INFO Total number of requests in list: 0 
+2017-11-15 12:08:52.0602 TRACE Response from https://dev.e-dapt.net:4440/edapt-service/navigation/tree received 
+2017-11-15 12:08:52.0777 TRACE Request[11161650] disposed 
+2017-11-15 12:08:52.0941 DEBUG Navigation Tree retrieved 
+2017-11-15 12:08:52.1333 TRACE Navigation tree: 
+{"status":"SUCCESS","result":{"navigationTree":{"infoCenterGroup":{"groupId":16,"navigationParameters":{},"children":[{"children":[{"children":null,"navigationId":6343,"itemId":"93E2A831-7154-1748-AB71-C9451687538E","title":"Call Queue","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"true","url":"https://dev.e-dapt.net:4440/abc654321/nav/client-alerts.html"},"controllerType":"WEB"},{"children":null,"navigationId":6317,"itemId":"3F67CDD6-0938-403B-86B4-77BA5F293D5E","title":"Watchlist","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"https://www.ubsonlineservices.wallst.com/redesign/markets/ipad/Watchlist?user_id=aaa&..internalqa..=on"},"controllerType":"WEB"},{"children":null,"navigationId":6341,"itemId":"56EB9233-88FB-B64A-A855-0F3E44B2FD2B","title":"Client Info","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"true","url":"https://dev.e-dapt.net:4440/abc654321/nav/client-info.html"},"controllerType":"WEB"}],"navigationId":6313,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Folder","icon":null,"entitlement":null,"navigationParameters":{"folderType":"VerticalSplitView","panelSizes":"30,40,30"},"controllerParameters":{},"controllerType":null}]},"leftMenuGroup":{"groupId":15,"navigationParameters":{},"children":[{"children":[{"children":[{"children":null,"navigationId":3867,"itemId":"54B84DB8-316D-5F4A-A523-59CB70E17160","title":"Mail","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["Exchange"],"allowedOffline":"true","defaultMark":"true"},"controllerParameters":{"isAddressVisible":"false","isAddressEnabled":"false","webGroup":"ExchangeClientGroup","isBridgeAvailable":"true","url":"maps51email:///?URL=https%3A%2F%2Fdev.e-dapt.net%3A4440%2Fedapt-static%2Findex.html%23%2Femail%3Flogin%3D!(user)!"},"controllerType":"WEB"},{"children":null,"navigationId":5272,"itemId":"CD7465E2-E3BE-C244-8075-A62F2B17EE2D","title":"Mail (local)","icon":null,"entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{"isAddressEnabled":"true","webGroup":"ExchangeClientGroup","isBridgeAvailable":"true","url":"maps51email:///?URL=http%3A%2F%2F5.189.97.28%3A51111%2F%23%2Femail%3Flogin%3D!(user)!"},"controllerType":"WEB"},{"children":null,"navigationId":4877,"itemId":"3933388A-1F64-4B49-81DF-E0DD7FAA005E","title":"Mail NTLM","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"false","isAddressEnabled":"false","webGroup":"ExchangeClientGroup","isBridgeAvailable":"true","url":"maps51email:///?URL=http%3A%2F%2Fmail2.botf03.net%3A80%2Fabc654321%2Fdist%2Findex.html%23%2Femail%3Flogin%3D!(user)!"},"controllerType":"WEB"},{"children":null,"navigationId":4078,"itemId":"ABD289AC-C9D7-48D9-981F-48A19D92A6A1","title":"Calendar","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["Exchange"],"allowedOffline":"true"},"controllerParameters":{"isAddressVisible":"false","isAddressEnabled":"false","webGroup":"ExchangeClientGroup","isBridgeAvailable":"true","url":"maps51calendar:///?URL=https%3A%2F%2Fdev.e-dapt.net%3A4440%2Fedapt-static%2Findex.html%23%2Fcalendar%3Flogin%3D!(user)!"},"controllerType":"WEB"},{"children":null,"navigationId":5273,"itemId":"F562B929-FA39-3049-9F17-48DD4612CAFA","title":"Calendar (local)","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressEnabled":"true","webGroup":"ExchangeClientGroup","isBridgeAvailable":"true","url":"maps51calendar:///?URL=http%3A%2F%2F5.189.97.28%3A51111%2F%23%2Fcalendar%3Flogin%3D!(user)!"},"controllerType":"WEB"},{"children":null,"navigationId":3868,"itemId":"6EE8B2F9-659B-C54B-BE5E-00B67C1CF41F","title":"Contacts","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["Exchange"],"allowedOffline":"true"},"controllerParameters":{"isAddressVisible":"false","isAddressEnabled":"false","webGroup":"ExchangeClientGroup","isBridgeAvailable":"true","url":"maps51contacts:///?URL=https%3A%2F%2Fdev.e-dapt.net%3A4440%2Fedapt-static%2Findex.html%23%2Fcontacts%3Flogin%3D!(user)!"},"controllerType":"WEB"},{"children":null,"navigationId":5274,"itemId":"C9126BAE-FA93-DC45-87E1-2A2102ABDBC9","title":"Contacts (local)","icon":null,"entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{"webGroup":"ExchangeClientGroup","isAddressEnabled":"true","isBridgeAvailable":"true","url":"maps51contacts:///?URL=http%3A%2F%2F5.189.97.28%3A51111%2F%23%2Fcontacts%3Flogin%3D!(user)!"},"controllerType":"WEB"},{"children":[{"children":null,"navigationId":3272,"itemId":"4410DB39-A402-4C4D-A2AF-F8F2ED6832E2","title":"Outlook Mail","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///OutlookMail_View"},"controllerType":"RDP"},{"children":null,"navigationId":3257,"itemId":"D2770459-0906-47E9-AAEE-5EB3443352FF","title":"Outlook Calendar","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///OutlookCalendar_View"},"controllerType":"RDP"},{"children":null,"navigationId":3249,"itemId":"35AB0AD7-7DD8-4F26-8761-79EE07912373","title":"Outlook Contacts","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///OutlookContacts_View"},"controllerType":"RDP"},{"children":null,"navigationId":3274,"itemId":"EF536F65-CFC0-4448-BD71-5A6209C919DC","title":"Tasks","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///OutlookTasks_View"},"controllerType":"RDP"},{"children":[{"children":null,"navigationId":5844,"itemId":"257DC5BC-BB96-9E44-BC4A-D62C624A3A2C","title":"CNN","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://www.cnn.com"},"controllerType":"WEB"},{"children":null,"navigationId":5845,"itemId":"1B4F32C5-3E83-C344-85C0-1EFDC19848EC","title":"Bing.com","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://www.bing.com"},"controllerType":"WEB"}],"navigationId":5843,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Test","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null}],"navigationId":3248,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Outlook","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null},{"children":null,"navigationId":3270,"itemId":"D8F25696-71B1-4331-B69D-714CEF6FCBD7","title":"CRM","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///Intranet_View?URL=http%3A%2F%2Fcrmserver%2FBOTF03%2F_root%2Fhomepage.aspx%3Fetc%3D2"},"controllerType":"RDP"},{"children":null,"navigationId":4177,"itemId":"57D69E15-791D-D346-8C63-6402704E5862","title":"Desktop","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///FullScreen_View"},"controllerType":"RDP"}],"navigationId":3237,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Communications","icon":"icon_communication.png","entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{},"controllerType":null},{"children":[{"children":null,"navigationId":4789,"itemId":"1A2A2A5C-AB5A-1743-A09C-D2034789E2C7","title":"SharePoint","icon":"icon_documents.png","entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{"webGroup":"web2","adapterId":"sharepoint","type":"doc","url":"maps51doc:///"},"controllerType":"DOCUMENTS"},{"children":null,"navigationId":4790,"itemId":"B046B525-60AD-E34C-9D75-A9F414373E0F","title":"Sharedrive","icon":"icon_documents.png","entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{"webGroup":"web1","adapterId":"sharedDrive","type":"doc","url":"maps51doc:///"},"controllerType":"DOCUMENTS"},{"children":null,"navigationId":4788,"itemId":"D4F43717-4079-4CA2-81EB-45542F633778","title":"Documents","icon":"icon_documents.png","entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{"webGroup":"doc","type":"documents","url":"maps51doc:///"},"controllerType":"DOCUMENTS"},{"children":null,"navigationId":5270,"itemId":"C5720CC6-172B-5443-8B6F-F4443C54AA21","title":"Sharepoint 2007","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"webGroup":"web","adapterId":"sharepoint2007Root","type":"doc","url":"maps51doc:///"},"controllerType":"DOCUMENTS"},{"children":null,"navigationId":5271,"itemId":"6194563C-447A-DA41-93C4-161421DE060D","title":"Sharepoint 2007 Sergey1 site","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"webGroup":"web","adapterId":"sharepoint2007","type":"doc","url":"maps51doc:///"},"controllerType":"DOCUMENTS"}],"navigationId":4787,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Documents","icon":"icon_documents.png","entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{},"controllerType":null},{"children":[{"children":null,"navigationId":4879,"itemId":"3AB20899-9631-4541-A9FF-42122819CBAA","title":"Basic1","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://msa29.e-dapt.net/basic/"},"controllerType":"WEB"},{"children":null,"navigationId":4880,"itemId":"CE891800-6E42-C94A-BADE-EC8D903EA3AB","title":"Basic2","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"https://msa29.e-dapt.net/basic/"},"controllerType":"WEB"},{"children":null,"navigationId":4881,"itemId":"71E86E30-7A3E-E74F-A135-3E37B821706F","title":"Basic3","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"https://msa30.botf03.net/basic/"},"controllerType":"WEB"},{"children":null,"navigationId":4882,"itemId":"259C0914-ABC2-CE46-832A-8CD305987575","title":"Basic4","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://intranet.botf03.net/secure/basic/basic.txt"},"controllerType":"WEB"},{"children":null,"navigationId":4883,"itemId":"44088B8D-654B-C443-8CEE-B09209FEC641","title":"Digest1","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://msa29.e-dapt.net/digest/"},"controllerType":"WEB"},{"children":null,"navigationId":4884,"itemId":"2C926550-6518-5646-A8BC-2267D0964DFF","title":"Digest2","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"https://msa29.e-dapt.net/digest/"},"controllerType":"WEB"},{"children":null,"navigationId":4885,"itemId":"5ACCFB10-19F2-8943-BA8F-DB142EBBBA39","title":"Digest3","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"https://msa30.botf03.net/digest/"},"controllerType":"WEB"},{"children":null,"navigationId":4886,"itemId":"2222153F-9EC2-8946-91EF-9014850A509F","title":"NTLM1","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://msa29.e-dapt.net/ntlm/"},"controllerType":"WEB"},{"children":null,"navigationId":4887,"itemId":"59AF7C06-FFEF-F342-A54B-EE61F40C16E0","title":"NTLM2","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"https://msa29.e-dapt.net/ntlm/"},"controllerType":"WEB"},{"children":null,"navigationId":4888,"itemId":"9FD3A149-6123-0A48-8552-2119DC2B73FF","title":"NTLM3","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"https://msa30.botf03.net/ntlm/"},"controllerType":"WEB"},{"children":null,"navigationId":4892,"itemId":"3933388A-1F64-4B49-81DF-E0DD7FAA005E","title":"Mail NTLM","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"false","isAddressEnabled":"false","webGroup":"ExchangeClientGroup","isBridgeAvailable":"true","url":"maps51email:///?URL=http%3A%2F%2Fmail2.botf03.net%3A80%2Fabc654321%2Fdist%2Findex.html%23%2Femail%3Flogin%3D!(user)!"},"controllerType":"WEB"},{"children":null,"navigationId":4889,"itemId":"85DFFCFB-AD2B-1649-BBEB-E574639ADCBF","title":"OWA","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"https://ex002.botf03.net/owa/"},"controllerType":"WEB"},{"children":null,"navigationId":4897,"itemId":"EA4F8B7C-EF13-C84F-8D03-076BFC3E03CB","title":"Whoami","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://www.tashkent.org/whoami.asp"},"controllerType":"WEB"},{"children":null,"navigationId":5263,"itemId":"AE06962B-3420-F846-A359-AB92D5B267E1","title":"Basic5","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://msa31.botf03.net/basic3/"},"controllerType":"WEB"},{"children":null,"navigationId":5264,"itemId":"CD07C9A3-1FB3-7F42-8B9E-FA3339BA684D","title":"NTLM without domain","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://msa32.botf03.net/ntlm2/"},"controllerType":"WEB"},{"children":null,"navigationId":5265,"itemId":"8B1CD6FF-CC22-C447-8DFB-85CDB205386F","title":"NTLM substitute domain","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://msa33.botf03.net/ntlm2/"},"controllerType":"WEB"},{"children":null,"navigationId":5267,"itemId":"0F75C788-4C0D-A04E-98D9-F886782E1DE4","title":"Kerberos1","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://msa29.e-dapt.net/Kerberos/"},"controllerType":"WEB"},{"children":null,"navigationId":5268,"itemId":"12A441C5-D724-F842-850A-8254C60646FE","title":"Kerberos2","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"https://msa29.e-dapt.net/Kerberos/"},"controllerType":"WEB"},{"children":null,"navigationId":5269,"itemId":"4FF55F83-26CA-B545-9E43-33C6DAF26AE1","title":"Kerberos3","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"https://msa30.botf03.net/Kerberos/"},"controllerType":"WEB"},{"children":null,"navigationId":5275,"itemId":"69E32895-7BCA-1546-9274-EA3A27B19745","title":"OAuth2","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"https://federation-sts-stage.accenture.com/oauth/ls/connect/authorize?response_type=code&scope=sample_resource+offline_access&redirect_uri=https%3A%2F%2Facn.app.8888.maps.mobile&client_id=8888.maps.mobile"},"controllerType":"WEB"},{"children":null,"navigationId":6137,"itemId":"053597A8-54E7-7249-85AC-7F0C97495EF2","title":"Same host 1","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://test0001.botf03.net/pages/page1-user1.html"},"controllerType":"WEB"},{"children":null,"navigationId":6138,"itemId":"464D7351-5594-E349-9BA6-BE3D10A641CE","title":"Same host 2","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://test0001.botf03.net/pages/page2-user2.html"},"controllerType":"WEB"}],"navigationId":4878,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Authentication","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null},{"children":null,"navigationId":4268,"itemId":"C17AE6C2-EA2A-494D-99B6-FDDB024A3B38","title":"Scanner","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":"BARCODE"},{"children":[{"children":null,"navigationId":6142,"itemId":"99F95794-DA90-3D4A-8BBB-640D0ECA04E0","title":"NewNav","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"true","url":"https://dev.e-dapt.net:4440/abc654321/nav/index.html"},"controllerType":"WEB"},{"children":null,"navigationId":4786,"itemId":"E4540FC3-FDF1-2640-8C74-0ABE017A9FB5","title":"Tcs Demo","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"false","loadSubstitutions":"{\"http://intranet.botf03.net/TCS_Demo/index.html\" : { \"script\" : \"document.getElementById('inputUser').value = 'admin';document.getElementById('inputPassword').value = 'admin';document.getElementsByClassName('btn-primary')[0].click();\",         \"match\" : \"prefix\",         \"substitution\" : false     }}","isAddressEnabled":"true","isBridgeAvailable":"true","forceFullScreen":"false","url":"http://intranet.botf03.net/TCS_Demo/index.html"},"controllerType":"WEB"},{"children":null,"navigationId":3241,"itemId":"59D4C645-295E-4223-8A85-8B2AD14BBD47","title":"HR","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","webGroup":"intranetGroup","url":"http://intranet.botf03.net/hr-main.htm"},"controllerType":"WEB"},{"children":null,"navigationId":3247,"itemId":"29C3FE74-4B72-4557-8D46-3F6CA0DDBC88","title":"Benefits","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"webGroup":"intranetGroup","isBridgeAvailable":"false","url":"http://intranet.botf03.net/benefits.htm"},"controllerType":"WEB"},{"children":null,"navigationId":3262,"itemId":"B22A4857-1113-49BB-AC3E-EFBA3D414D24","title":"Corporate Policies","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","webGroup":"intranetGroup","url":"http://intranet.botf03.net/policies.htm"},"controllerType":"WEB"},{"children":null,"navigationId":3251,"itemId":"29744CFC-E16A-4127-90F9-3C038A6DF222","title":"Corporate Values","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"webGroup":"intranetGroup","isBridgeAvailable":"false","url":"http://intranet.botf03.net/values.htm"},"controllerType":"WEB"},{"children":null,"navigationId":3751,"itemId":"48878695-8CE8-274C-9CDE-28DD8B55E7EB","title":"Sharepoint","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://128.66.200.105"},"controllerType":"WEB"},{"children":null,"navigationId":4782,"itemId":"E18BAB7A-1AF9-3D49-9DAE-C5F0226B31A0","title":"testKerb1","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://kbtest1.botf03.net"},"controllerType":"WEB"},{"children":null,"navigationId":4783,"itemId":"C23C70CD-3E21-E344-9D71-3764D26B422A","title":"testKerb2","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://kbtest2.botf03.net/"},"controllerType":"WEB"},{"children":null,"navigationId":4875,"itemId":"85DFFCFB-AD2B-1649-BBEB-E574639ADCBF","title":"OWA","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"https://ex002.botf03.net/owa/"},"controllerType":"WEB"},{"children":null,"navigationId":4876,"itemId":"FD03EB35-EFAB-2E47-A228-A9D627F458E5","title":"Cami","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://www.cami.com/?cat=1020"},"controllerType":"WEB"},{"children":null,"navigationId":4893,"itemId":"67D16E10-2AA3-C847-96AA-CCF0F562E3E4","title":"Test1","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{\"http://aafqualvisualization.accenture.com\" : { \"script\" : \"document.querySelector('meta[name=viewport]').setAttribute('content', 'width=device-width, initial-scale=0.73, maximum-scale=1.0, user-scalable=0')\", \"match\" : \"prefix\", \"substitution\" : false , \"busy\": false}}","isBridgeAvailable":"false","url":"http://aafqualvisualization.accenture.com/#/signin?externalRedirect=%2Fviews%2FUSAccidentsAnalysis%2FDataVisualizationDemo%3F:iid%3D1%26&site="},"controllerType":"WEB"},{"children":null,"navigationId":4894,"itemId":"AE7BB554-BD6E-8E40-8A0B-CAEFBFAAB02B","title":"Test2","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{\"http://aafqualvisualization.accenture.com\" : { \"script\" : \"document.querySelector('meta[name=viewport]').setAttribute('content', 'width=device-width, initial-scale=0.96, maximum-scale=1.0, user-scalable=0')\", \"match\" : \"prefix\", \"substitution\" : false , \"busy\": false}}","isBridgeAvailable":"false","url":"http://aafqualvisualization.accenture.com/#/signin?externalRedirect=%2Fviews%2FElectricityUsageAnalysis%2FDataVisualizationDemo%3F:embed%3Dy&site="},"controllerType":"WEB"},{"children":null,"navigationId":4895,"itemId":"68A3B113-F367-EA46-B639-D235B06EB79A","title":"Test3","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://aafqualvisualization.accenture.com/AccentureViz/ETLJobs/24hoursin2minutes.html"},"controllerType":"WEB"},{"children":null,"navigationId":4896,"itemId":"2D9BB263-7535-BC4D-92B9-4199A05D01BF","title":"Test4","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://aafqualvisualization.accenture.com/AccentureViz/InnovationSummitDashboards/"},"controllerType":"WEB"}],"navigationId":3227,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Intranet","icon":"icon_intranet.png","entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null},{"children":[{"children":null,"navigationId":4270,"itemId":"990EFF42-65E6-DE45-8F5D-0AFD01F9A4F0","title":"Client Search","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"true","webGroup":"ExchangeClientGroup1","url":"https://dev.e-dapt.net:4440/abc654321/client/#/clientsearch"},"controllerType":"WEB"},{"children":null,"navigationId":3254,"itemId":"7A9DEF9D-A1DF-4D2F-BC2C-3AB734CCE963","title":"Search","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"url":"maps51ra:///NewClientSearch_View"},"controllerType":"RDP"},{"children":null,"navigationId":3236,"itemId":"8240D8A1-49F8-4868-B4D9-C09D93CDB7F4","title":"Retirement","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"],"requiredContext":"client_selection"},"controllerParameters":{"isHomeForced":"true","isBridgeAvailable":"false","url":"http://intranet.e-dapt.net/RetirementPanner!(zip)!.pdf"},"controllerType":"PDF"},{"children":[{"children":null,"navigationId":3259,"itemId":"2F4FDD42-F4B1-433C-A379-22CC8D3F9F13","title":"Info","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"url":"maps51ra:///AccountInfo_View?URL=http%3A%2F%2Fcrmserver%2FBOTF03%2Fsfa%2Faccts%2Fedit.aspx%3Fid%3D%7B%7BAccountNumber%7D%7D%23"},"controllerType":"RDP"},{"children":null,"navigationId":3240,"itemId":"4CD56EF6-6A74-4CD6-BCC5-F8260C8F5628","title":"Activities","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"url":"maps51ra:///Intranet_View?URL=http%3A%2F%2Fcrmserver%2FBOTF03%2Fsfa%2Fconts%2Fareas.aspx%3FoId%3D%7B%7BAccountNumber%7D%7D%26oType%3D1%26security%3D852023%26tabSet%3DareaActivities"},"controllerType":"RDP"},{"children":null,"navigationId":3256,"itemId":"1461E5E1-B6A5-4D1D-88B1-5E736A2D83B0","title":"Gains/Losses","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"isHomeForced":"true","isBridgeAvailable":"false","url":"http://intranet.botf03.net/GainLoss!(zip)!.pdf"},"controllerType":"PDF"},{"children":null,"navigationId":3275,"itemId":"8C8D04CC-82D4-4D5B-A59A-6BF255C3E829","title":"Performance","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isHomeForced":"true","isBridgeAvailable":"false","url":"http://intranet.botf03.net/Performance!(zip)!.pdf"},"controllerType":"PDF"},{"children":null,"navigationId":3263,"itemId":"28B5BFD0-A2D1-4967-ADA8-EA4A60ECBA9A","title":"Billing (3270)","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"url":"maps51ra:///3270_View"},"controllerType":"RDP"},{"children":null,"navigationId":3231,"itemId":"BF9DAE22-F69F-4185-9826-B3B491E692CC","title":"Order Entry","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"isBridgeAvailable":"false","url":"http://www.tashkent.org/appery/index.html"},"controllerType":"WEB"},{"children":null,"navigationId":3870,"itemId":"2176B177-68FD-5F4E-84E3-06F456297C98","title":"CNN","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["asdf"]},"controllerParameters":{"loadSubstitutions":"{\"http://www.cnn.com/\" : {         \"script\" : \"document.location = 'http://www.google.com';\",         \"match\" : \"exact\",         \"substitution\" : true     } }","isAddressVisible":"true","isBridgeAvailable":"false","url":"http://www.cnn.com/"},"controllerType":"WEB"}],"navigationId":3230,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Accounts","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"],"requiredContext":"client_selection"},"controllerParameters":{},"controllerType":null},{"children":null,"navigationId":3252,"itemId":"FE8FEEE6-774D-48F3-AC1D-2C93837E4EDF","title":"Proposal","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"],"requiredContext":"client_selection"},"controllerParameters":{"isHomeForced":"true","isBridgeAvailable":"false","url":"http://intranet.e-dapt.net/!(zip)!.pdf"},"controllerType":"PDF"},{"children":[{"children":null,"navigationId":3265,"itemId":"FA8E4800-C699-4DD7-ADF3-898351B997E5","title":"Online Profile","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"isBridgeAvailable":"false","url":"https://www.linkedin.com/pub/!(linkedin)!"},"controllerType":"WEB"},{"children":null,"navigationId":3235,"itemId":"D0B662FF-625F-4059-8AF5-EDAE7426BCCA","title":"Location","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"isBridgeAvailable":"false","url":"http://maps.google.com/maps?q=!(clientaddress)!"},"controllerType":"WEB"},{"children":null,"navigationId":3253,"itemId":"C571FCE0-67DB-4056-A64A-3B1C2198E1E5","title":"Weather","icon":null,"entitlement":null,"navigationParameters":{"authenticationStratums":["RSA"]},"controllerParameters":{"isBridgeAvailable":"false","url":"http://www.weather.com/weather/today/l/!(weather)!"},"controllerType":"WEB"}],"navigationId":3234,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Profile","icon":null,"entitlement":null,"navigationParameters":{"requiredContext":"client_selection"},"controllerParameters":{},"controllerType":null},{"children":null,"navigationId":3278,"itemId":"494140A0-FA3E-40E7-91C0-7CD51C63C2AC","title":"Portfolio Review","icon":null,"entitlement":null,"navigationParameters":{"requiredContext":"client_selection","authenticationStratums":["RSA"]},"controllerParameters":{"isHomeForced":"true","isBridgeAvailable":"false","url":"http://intranet.e-dapt.net/Portfolio!(zip)!.pdf"},"controllerType":"PDF"},{"children":null,"navigationId":3258,"itemId":"EADA8AB8-606F-4B48-837B-25226D1D7BF7","title":"Summary","icon":null,"entitlement":null,"navigationParameters":{"requiredContext":"client_selection","authenticationStratums":["RSA"]},"controllerParameters":{"isHomeForced":"true","isBridgeAvailable":"false","url":"http://intranet.e-dapt.net/Summary!(zip)!.pdf"},"controllerType":"PDF"},{"children":null,"navigationId":3871,"itemId":"A00CFDB7-E3F1-1340-9BBF-6C11C19CEB22","title":"Summary PDF","icon":null,"entitlement":null,"navigationParameters":{"requiredContext":"client_selection"},"controllerParameters":{"url":"http://intranet.botf03.net/Summary!(zip)!.pdf"},"controllerType":"PDF"},{"children":null,"navigationId":3746,"itemId":"B0AADA6C-BB41-4808-9EC4-F502E78534C2","title":"Contact Management","icon":null,"entitlement":null,"navigationParameters":{"requiredContext":"client_selection","authenticationStratums":["RSA"]},"controllerParameters":{"url":"maps51ra:///Intranet_View?URL=http%3A%2F%2Fcrmserver"},"controllerType":"RDP"},{"children":null,"navigationId":4637,"itemId":"97B7FD74-FCB0-554C-B816-F7B918420A08","title":"OIL.Y","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{\"http://52.90.106.143/\" : { \"script\" : \"setTimeout(func, 1000);function func(){setTimeout(func, 1000);if (document.getElementsByClassName('btn-default')[0] != null && document.getElementsByClassName('btn-default')[0].innerText=='Submit Work Order') {if (document.getElementsByClassName('btn-default')[0].id!=5) {var ddd=encodeURI(encodeURI(document.getElementsByClassName('modal-section-2-month')[0].innerText)); var ttt=encodeURI(encodeURI(document.getElementsByClassName('modal-section-2-time')[0].innerText));document.getElementsByClassName('btn-default')[0].id=5;document.getElementsByClassName('btn-default')[0].addEventListener('click', function() {if (document.getElementsByClassName('btn-default')[0].innerText=='Submit Work Order'){bridge.changeCurrentNavigationNode('maps51email:///?URL=https%3A%2F%2Fdev.e-dapt.net%3A4440%2Fabc654321%2Fdist%2Findex.html%23%2Femail%3Flogin%3D!(user)!%26to%3DDan.Corin%40oily.com%26subject%3DNew%2520Work%2520Order%2520for%2520'+ddd+'%2520'+ttt+'%2520%2520for%2520Pad1%2520-%25200322515100402%26body%3D%253C!DOCTYPE%2520html%253E%250A%253Chtml%253E%250A%253Chead%253E%250A%253Ctitle%253EPage%2520Title%253C%252Ftitle%253E%250A%253C%252Fhead%253E%250A%253Cbody%253D%253C!DOCTYPE%2520html%253E%250A%253Chtml%253E%250A%253Chead%253E%250A%253C%252Fhead%253E%250A%253Cbody%253E%250A%253Ch1%253EWork%2520Order%253C%252Fh1%253E%250A%253Cp%253ESchedule%2520haul%2520away%2520for%2520'+ddd+'%2520'+ttt+'%2520%2520for%2520Pad1%2520-%25200322515100402%253C%252Fp%253E%250A%253Cimg%2520src%253D%2522http%253A%252F%252Fintranet.e-dapt.net%252Fmap.png%2522%252F%253E%250A%253C%252Fbody%253E%250A%253C%252Fhtml%253E');}}, false);}}}\",         \"match\" : \"prefix\",         \"substitution\" : false }}","webGroup":"accentureoil","isBridgeAvailable":"true","url":"http://52.90.106.143"},"controllerType":"WEB"}],"navigationId":3229,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Client","icon":"icon_client.png","entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null},{"children":[{"children":null,"navigationId":3246,"itemId":"3A55819B-8D07-415E-A60F-BE4F1587A353","title":"Thomson Reuters","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"type":"rss","url":"http://ir.thomsonreuters.com/corporate.rss?c=76540&Rule=Cat=news~subcat=ALL"},"controllerType":"RSSVIEWER"},{"children":null,"navigationId":3243,"itemId":"D7832D2C-A463-4AD5-A5E5-F8817CC66B76","title":"BBC","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"type":"rss","url":"http://newsrss.bbc.co.uk/rss/newsonline_world_edition/business/rss.xml"},"controllerType":"RSSVIEWER"},{"children":null,"navigationId":3276,"itemId":"F633159E-3552-4E8D-8FD5-9118CC15DF4B","title":"NPR","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"type":"rss","url":"http://www.npr.org/rss/rss.php?id=1006"},"controllerType":"RSSVIEWER"},{"children":null,"navigationId":3269,"itemId":"95A0B3EC-7CEA-4988-BEE0-1D74A0F0870A","title":"MIT","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"type":"rss","url":"http://web.mit.edu/newsoffice/topic/mitbusiness-rss.xml"},"controllerType":"RSSVIEWER"},{"children":null,"navigationId":3271,"itemId":"8C1A789C-4B9F-4B4D-BD84-CBA8392E5BD5","title":"Apple","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"type":"rss","url":"http://developer.apple.com/news/rss/news.rss"},"controllerType":"RSSVIEWER"}],"navigationId":3242,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Research","icon":"icon_research.png","entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null},{"children":[{"children":null,"navigationId":3232,"itemId":"3F67CDD6-0938-403B-86B4-77BA5F293D5E","title":"Watchlist","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"https://www.ubsonlineservices.wallst.com/redesign/markets/ipad/Watchlist?user_id=aaa&..internalqa..=on"},"controllerType":"WEB"},{"children":null,"navigationId":3255,"itemId":"D3945E5E-A0B3-4B14-A2F8-C1AAC8B94FB0","title":"Company Profile","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"https://www.ubsonlineservices.wallst.com/redesign/markets/ipad/StockProfile?user_id=aaa&..internalqa..=on&symbol=!(symbol)!"},"controllerType":"WEB"},{"children":null,"navigationId":3264,"itemId":"2E1B711A-7D39-4F76-A9B9-C657D78468AE","title":"Options","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"https://www.ubsonlineservices.wallst.com/redesign/markets/ipad/StockOptions?user_id=aaa&..internalqa..=on&symbol=!(symbol)!"},"controllerType":"WEB"},{"children":null,"navigationId":3261,"itemId":"C0CD3440-01EF-49B0-8F9E-A34CC7FA6F72","title":"Charts","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"https://www.ubsonlineservices.wallst.com/redesign/markets/ipad/stocksadvancedchart?user_id=aaa&..internalqa..=on&symbol=!(symbol)!"},"controllerType":"WEB"},{"children":null,"navigationId":3224,"itemId":"DB926D92-E650-4161-85E2-F5BE940BB488","title":"Markets Today","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://www.ubsonlineservices.wallst.com/redesign/Markets?user_id=aaa&..internalqa..=on"},"controllerType":"WEB"},{"children":null,"navigationId":3277,"itemId":"C715DA98-A9D3-48B8-AC17-7E30C00AE127","title":"News","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"https://www.ubsonlineservices.wallst.com/redesign/markets/ipad/NewsEvents?user_id=aaa&..internalqa..=on&symbol=!(symbol)!"},"controllerType":"WEB"},{"children":null,"navigationId":4075,"itemId":"25ED9097-77AF-5E41-937D-EA86D5A7AE20","title":"Yahoo Finance","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{\"http://finance.yahoo.com\" : { \"script\" : \"var pos=bridge.redirectUrl.search('s=');if (pos > 0) {var symbol=bridge.redirectUrl.substring(bridge.redirectUrl.search('s=')+2); ampPos=symbol.indexOf('&'); if (ampPos>0) {symbol=symbol.substring(0,ampPos)}bridge.setContext('symbol', symbol, true);}'false'\", \"match\" : \"prefix\", \"substitution\" : true , \"busy\": false  } }","isBridgeAvailable":"true","url":"http://finance.yahoo.com"},"controllerType":"WEB"},{"children":null,"navigationId":4076,"itemId":"163EB4CB-7FC0-8E44-B5E9-9B962181DDB6","title":"Google Finance","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isHomeForced":"true","isBridgeAvailable":"false","url":"https://www.google.com/finance?q=!(symbol)!"},"controllerType":"WEB"}],"navigationId":3223,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Market Data","icon":"icon_marketdata.png","entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null},{"children":[{"children":null,"navigationId":4898,"itemId":"C4A3EA4E-1F04-4248-8C59-9F07B924331C","title":"Mailto","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"webGroup":"mailto","isBridgeAvailable":"false","url":"https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Email_links"},"controllerType":"WEB"},{"children":null,"navigationId":3250,"itemId":"7519012B-777B-41A6-AD4E-780B042E6B52","title":"Google","icon":null,"entitlement":null,"navigationParameters":{"1test_json1":["qqqq","wwww","gggg"]},"controllerParameters":{"loadSubstitutions":"{\".*\\\\.google\\\\.com.*\" : { \"script\" : \"http://intranet.botf03.net/test1.js\", \"match\" : \"regexp\", \"substitution\" : false }}","isAddressVisible":"true","isBridgeAvailable":"true","url":"http://www.google.com"},"controllerType":"WEB"},{"children":null,"navigationId":6139,"itemId":"4982CDC7-ED12-DF4E-AE7C-CB76B6755614","title":"Citrix","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://intranet.botf03.net/citrix/SDKExample.html"},"controllerType":"WEB"},{"children":null,"navigationId":3233,"itemId":"39F05D1F-B072-4B9B-9477-A4F2F7BEF88C","title":"Bloomberg","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://www.bloomberg.com"},"controllerType":"WEB"},{"children":null,"navigationId":4272,"itemId":"731501E2-449B-B349-8C14-A44E39DB51F0","title":"Product Lookup","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","isHomeForced":"true","url":"http://www.upcitemdb.com/upc/!(Barcode)!"},"controllerType":"WEB"},{"children":null,"navigationId":3873,"itemId":"FC67623B-5376-EA45-9D66-727EDBA8ED99","title":"ETNA","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{\"http://fintechstudios.etnatrader.com/user/logon\" : { \"script\" : \"document.getElementsByName('Login')[0].value ='jim@fintechstudios.com'; document.getElementsByName('Password')[0].value = 'fintech'; document.forms[0].submit();\", \"match\" : \"prefix\", \"substitution\" : false }}","webGroup":"fintech1","isBridgeAvailable":"false","url":"http://fintechstudios.etnatrader.com/Home/ProceedAnyWay"},"controllerType":"WEB"},{"children":null,"navigationId":3226,"itemId":"5298265A-2C53-492C-B644-4B4024208C13","title":"Fidelity","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","isBridgeAvailable":"false","url":"http://www.fidelity.com/viewpoints/overview"},"controllerType":"WEB"},{"children":null,"navigationId":3655,"itemId":"257DC5BC-BB96-9E44-BC4A-D62C624A3A2C","title":"CNN","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://www.cnn.com"},"controllerType":"WEB"},{"children":null,"navigationId":3735,"itemId":"1B4F32C5-3E83-C344-85C0-1EFDC19848EC","title":"Bing.com","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","url":"http://www.bing.com"},"controllerType":"WEB"},{"children":null,"navigationId":3874,"itemId":"AC028675-8DF6-684F-BA71-B4C6105ECEF2","title":"Savanet","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{\"http://www.rialto.co/login.aspx\" : { \"script\" : \"document.forms['form1'].txtUserName.value='jim@fintechstudios.com';document.forms['form1'].txtPassword.value='savanet';document.forms['form1'].btnLogin.click();\",         \"match\" : \"prefix\",         \"substitution\" : false     }}","webGroup":"fintech4","isBridgeAvailable":"false","url":"http://www.rialto.co/Login.aspx"},"controllerType":"WEB"},{"children":null,"navigationId":3875,"itemId":"364E8B28-1122-2340-8899-FE8861EF33CB","title":"Empower","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{\"http://empower02.ienterprises.com/\" : { \"script\" : \"document.empform.user_name.value='!(user)!';document.empform.password.value='aaaa';document.empform.submit();\",         \"match\" : \"prefix\",         \"substitution\" : false     }}","isBridgeAvailable":"false","url":"http://empower02.ienterprises.com"},"controllerType":"WEB"},{"children":null,"navigationId":3876,"itemId":"7433FD15-4C99-D94C-99FD-275B93433A27","title":"Social Smart","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{\"https://icomply02.isocialsmart.com/icomply-web/login\" : { \"script\" : \"document.forms[0].username.value='!(user)!';document.forms[0].elements.namedItem('login-password').value='aaaa';document.forms[0].submit();\",         \"match\" : \"prefix\",         \"substitution\" : false     }}","isBridgeAvailable":"false","url":"https://icomply02.isocialsmart.com/"},"controllerType":"WEB"},{"children":null,"navigationId":6161,"itemId":"FE01C5FD-5EF8-3646-811F-09EB09870ADC","title":"WindowOpen","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isAddressVisible":"true","loadSubstitutions":"{\"http://intranet.botf03.net\" : { \"script\" : \"window.open=function(url,name,specs){var divBackground=document.createElement('div');var divIframeWrapper=document.createElement('div');var cross=document.createElement('div');var iframe=document.createElement('iframe');divBackground.id='outerdiv';divBackground.setAttribute('name',name);divBackground.style.display='relative';divBackground.style.background='rgba(65, 65, 65, 0.3)';divBackground.style.position='fixed';divBackground.style.paddingTop='50px';divBackground.style.width='100%';divBackground.style.height='100%';divBackground.style.top=0;divBackground.style.left=0;divBackground.style.zIndex='101';divBackground.style.boxSizing='border-box';divIframeWrapper.style.width='100%';divIframeWrapper.style.height='100%';divIframeWrapper.style.overflow='auto';divIframeWrapper.style.webkitOverflowScrolling='touch';cross.style.position='absolute';cross.style.top='25px';cross.style.right='25px';cross.style.transform='translate(50%, -50%)';cross.style.webkitTransform='translate(50%,-50%)';cross.style.color='white';cross.style.cursor='pointer';cross.style.fontSize='60px';cross.innerHTML='&#215;';cross.onclick=closeModal;iframe.src=url;iframe.frameBorder=0;iframe.style.overflow='auto';iframe.style.width='100%';iframe.style.height='100%';divBackground.appendChild(divIframeWrapper);divBackground.appendChild(cross);divIframeWrapper.appendChild(iframe);document.body.appendChild(divBackground);iframe.contentWindow.opener=window;function closeModal(){document.body.removeChild(document.getElementById('outerdiv'))}return iframe.contentWindow};\", \"match\" : \"prefix\", \"substitution\" : false , \"busy\": false}}","isAddressEnabled":"true","isBridgeAvailable":"true","url":"http://intranet.botf03.net/test.html"},"controllerType":"WEB"}],"navigationId":3225,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Internet","icon":"icon_internet.png","entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null},{"children":[{"children":null,"navigationId":3245,"itemId":"CE857939-0901-4452-BA79-7A413EB8E648","title":"Word","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///MicrosoftWord_View"},"controllerType":"RDP"},{"children":null,"navigationId":3266,"itemId":"09DF16CF-E99C-4BA6-B673-128654736A84","title":"Excel","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///MicrosoftExcel_View"},"controllerType":"RDP"},{"children":null,"navigationId":3268,"itemId":"EEAF9F06-12BF-46F7-B6DC-982A2A323138","title":"PowerPoint","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///MicrosoftPowerPoint_View"},"controllerType":"RDP"},{"children":null,"navigationId":3627,"itemId":"A2F0BA5F-7333-7848-B3FC-270CD6E1E9D9","title":"Word Online","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{     \"https://login.live.com/login.srf\" : {         \"script\" : \"if( document.f1.loginfmt.value != null ) { document.f1.loginfmt.value='!(user)!@51maps.com'; document.f1.passwd.value='!(password)!';document.f1.SI.click(); }\",         \"match\" : \"prefix\",         \"substitution\" : false     },     \"^http://.*e1\\\\.ru[/]*$\" : {         \"script\" : \"document.location = 'http://cnn.com';\",         \"match\" : \"regexp\",         \"substitution\" : true     } }","isBridgeAvailable":"false","url":"https://onedrive.live.com/view.aspx?cid=56c636eb0617a361&page=view&resid=56C636EB0617A361!107&parId=56C636EB0617A361!101&app=Word&wacqt=undefined"},"controllerType":"WEB"},{"children":null,"navigationId":3628,"itemId":"61C6509A-B78C-944E-8F29-7AA9E2B24131","title":"PowerPoint Online","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{     \"https://login.live.com/login.srf\" : {         \"script\" : \"if( document.f1.loginfmt.value != null ) { document.f1.loginfmt.value='!(user)!@51maps.com'; document.f1.passwd.value='!(password)!';document.f1.SI.click(); }\",         \"match\" : \"prefix\",         \"substitution\" : false     },     \"^http://.*e1\\\\.ru[/]*$\" : {         \"script\" : \"document.location = 'http://cnn.com';\",         \"match\" : \"regexp\",         \"substitution\" : true     } }","isBridgeAvailable":"false","url":"https://onedrive.live.com/view.aspx?cid=56c636eb0617a361&page=view&resid=56C636EB0617A361!108&parId=56C636EB0617A361!101&app=PowerPoint&wacqt=undefined"},"controllerType":"WEB"},{"children":null,"navigationId":3629,"itemId":"D32CC306-8F54-F346-9F8A-ACB71FFF17FF","title":"Excel Online","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{     \"https://login.live.com/login.srf\" : {         \"script\" : \"if( document.f1.loginfmt.value != null ) { document.f1.loginfmt.value='!(user)!@51maps.com'; document.f1.passwd.value='!(password)!';document.f1.SI.click(); }\",         \"match\" : \"prefix\",         \"substitution\" : false     },     \"^http://.*e1\\\\.ru[/]*$\" : {         \"script\" : \"document.location = 'http://cnn.com';\",         \"match\" : \"regexp\",         \"substitution\" : true     } }","isBridgeAvailable":"false","url":"https://onedrive.live.com/edit.aspx?cid=56c636eb0617a361&page=view&resid=56C636EB0617A361!106&parId=56C636EB0617A361!101&app=Excel&wacqt=undefined"},"controllerType":"WEB"}],"navigationId":3244,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Tools","icon":"icon_tools.png","entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null},{"children":null,"navigationId":3279,"itemId":"33048254-FF47-47DC-90D0-B820D74FB1FC","title":"Help","icon":"icon_help.png","entitlement":null,"navigationParameters":{"requiredContext":"default_mode"},"controllerParameters":{},"controllerType":"WEB"},{"children":[{"children":null,"navigationId":7541,"itemId":"DA0F3D7B-CB4E-5643-9F18-8FCDC3034B31","title":"Notepad","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"webGroup":"group2","isBridgeAvailable":"true","url":"http://intranet.botf03.net/citrix/AppBus.html?appname=Notepad&user=paulk"},"controllerType":"WEB"},{"children":null,"navigationId":7542,"itemId":"72DAAFDC-2945-4202-9993-7CC87E7BBC0B","title":null,"icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"true","webGroup":"group1","url":"http://intranet.botf03.net/citrix/AppBus.html?appname=Calc&user=paulk"},"controllerType":"WEB"}],"navigationId":7539,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Citrix","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null},{"children":[{"children":null,"navigationId":7773,"itemId":"CD680FE3-25B6-48EA-A56C-8B5B5E71B9E3","title":"TestCalc","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///Calc"},"controllerType":"APPINTEGRATOR"},{"children":null,"navigationId":7774,"itemId":"E4AAFA0F-8A8A-4A70-AC8F-B0430DA8CB4A","title":"testNotepad","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"url":"maps51ra:///Notepad"},"controllerType":"APPINTEGRATOR"},{"children":null,"navigationId":7554,"itemId":"5E8D40A7-D214-42AE-8ACB-19FD37113096","title":"EWS Kerberos","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"true","url":"https://ex002.botf03.net/ews/Exchange.asmx"},"controllerType":"WEB"},{"children":null,"navigationId":7555,"itemId":"91B39BE0-A0C7-46A9-9256-E8313278827E","title":"Mattermost","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"false","webGroup":"mattermost","url":"http://192.9.99.104:8065"},"controllerType":"WEB"},{"children":null,"navigationId":7546,"itemId":"068032D0-A9EA-4285-9F24-69FA7637321D","title":"SetContext","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"isBridgeAvailable":"true","url":"http://intranet.botf03.net/scripts/setContextTest.html"},"controllerType":"WEB"},{"children":null,"navigationId":7545,"itemId":"54090EB4-37AB-40B7-9875-BE3E816549A9","title":"Athena","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{"loadSubstitutions":"{ \".*\\\\.athenahealth\\\\.com.*\" : { \"script\" : \"athenaMain();\", \"match\" : \"regexp\", \"substitution\" : false } }","isAddressEnabled":"true","webGroup":"athena","isBridgeAvailable":"true","url":"https://preview.athenahealth.com/1/1/login.esp?VIEWCROSSBROWSER=1"},"controllerType":"WEB"}],"navigationId":7544,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Test","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null}],"navigationId":3222,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"","icon":null,"entitlement":null,"navigationParameters":{},"controllerParameters":{},"controllerType":null}]},"bottomFixedGroup":{"groupId":14,"navigationParameters":{},"children":[{"children":[{"children":null,"navigationId":3221,"itemId":"09F80864-1E48-49F7-B2DC-FC15992B7534","title":"Log out","icon":"logout","entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{"action":"logout"},"controllerType":"SYSTEM-FUNCTION"},{"children":null,"navigationId":3220,"itemId":"52AF85B3-4F73-4A17-9C7E-B06F734556D7","title":"Lock","icon":"lock","entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{"action":"lock"},"controllerType":"SYSTEM-FUNCTION"},{"children":null,"navigationId":3872,"itemId":"56C9FA9A-356A-FD4E-8C30-957282E89E08","title":"Present","icon":"present.png","entitlement":null,"navigationParameters":{},"controllerParameters":{"action":"present"},"controllerType":"SYSTEM-FUNCTION"}],"navigationId":3219,"itemId":"86EF8A3B-8307-4C63-ADBF-AB3898C5DCDC","title":"Folder","icon":null,"entitlement":null,"navigationParameters":{"allowedOffline":"true"},"controllerParameters":{},"controllerType":null}]}},"parameters":{"pingInterval":"5","DraftUrl":"maps51email:///?URL=https%3A%2F%2Fdev.e-dapt.net%3A4440%2Fabc654321%2Fdist%2Findex.html%23%2Femail%3Flogin%3D!(user)!%26draftId%3D!(draftId)!%26attachmentId%3D!(attachmentId)!","DocumentEditURL":"maps51ra:///MicrosoftExcel_View","WebAutoLoginWhiteList":["128.66.200.2"],"rdpPostLoginScript":"[ [\"key\", \"Enter\"] ]","rdpPort":"3389","OfflineAttachmentsControl":"on","rememberLastUser":"true","stratumGroups":[{"name":"group a","stratums":["fgb","gjj"]},{"name":"qqq","stratums":["hjk","dfgb","gjj"]},{"name":"test","stratums":["hjk","fgb","dfgb","gjj","fgh","fgj"]}],"rdpIp":"rdp-exa1-dev","logoutIddleTime":"1800","NewMailURL":"maps51email:///?URL=https%3A%2F%2Fdev.e-dapt.net%3A4440%2Fabc654321%2Fdist%2Findex.html%23%2Femail%3Flogin%3D!(user)!%26to%3D!(email_address)!%26subject%3D!(subject)!%26body%3D!(body)!","rdpUnlockDelay":"2","exchangeClientUpdateInterval":"60","stratums":[{"name":"hjk","expiration":78},{"name":"fgb","expiration":67},{"name":"dfgb","expiration":56},{"name":"gjj","expiration":767},{"name":"fgh","expiration":78},{"name":"fgj","expiration":6},{"name":"rtfj","expiration":78},{"name":"uikl","expiration":6},{"name":"yhk","expiration":5},{"name":"t","expiration":1}],"userAgentSubstitutions":"{\"\\\\.etnatrader\\\\.com\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A\", \".*\\\\.brightspace\\\\.com/.*\" : \"Mozilla/5.0 (iPad; CPU OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E8301 Safari/602.1\" }","PubSubPullInterval":"1000","iconUrl":"http://10.0.0.161:8080/icons/","rdpPreload":"true","OfflineDocumentsControl":"on","isTouchIDEnabled":"true","lockIddleTime":"900"}}} 
+2017-11-15 12:08:52.1994 TRACE Set timeout 00:01:18 for stratum 'hjk' 
+2017-11-15 12:08:52.2104 TRACE Set timeout 00:01:07 for stratum 'fgb' 
+2017-11-15 12:08:52.2104 TRACE Set timeout 00:00:56 for stratum 'dfgb' 
+2017-11-15 12:08:52.2344 TRACE Set timeout 00:12:47 for stratum 'gjj' 
+2017-11-15 12:08:52.2454 TRACE Set timeout 00:01:18 for stratum 'fgh' 
+2017-11-15 12:08:52.2574 TRACE Set timeout 00:00:06 for stratum 'fgj' 
+2017-11-15 12:08:52.2574 TRACE Set timeout 00:01:18 for stratum 'rtfj' 
+2017-11-15 12:08:52.2824 TRACE Set timeout 00:00:06 for stratum 'uikl' 
+2017-11-15 12:08:52.2934 TRACE Set timeout 00:00:05 for stratum 'yhk' 
+2017-11-15 12:08:52.3054 TRACE Set timeout 00:00:01 for stratum 't' 
+2017-11-15 12:08:52.3315 TRACE PubSubService.Start - called 
+2017-11-15 12:08:52.3435 TRACE MessageRetriever.Start - started 
+2017-11-15 12:08:52.3435 TRACE Request[25980145] created 
+2017-11-15 12:08:52.3555 TRACE MessageDispatcher.Start - started 
+2017-11-15 12:08:52.3670 INFO Request[25980145] added to requests list 
+2017-11-15 12:08:52.3670 TRACE PubSubService.Start - started 
+2017-11-15 12:08:52.3905 INFO Total number of requests in list: 1 
+2017-11-15 12:08:52.4065 TRACE Save user login 
+2017-11-15 12:08:52.4145 TRACE Request[25980145] - header Content-Type set to value application/json 
+2017-11-15 12:08:52.4145 TRACE StratumService: 'Local' stratum requested 
+2017-11-15 12:08:52.4395 TRACE Request[25980145] - header Content-Length set to value 51 
+2017-11-15 12:08:52.4515 TRACE StratumService: 'Local' stratum already granted 
+2017-11-15 12:08:52.4636 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:08:52.4806 TRACE Build menu view model 
+2017-11-15 12:08:52.4806 TRACE Request[25980145] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:08:52.5116 TRACE Request[25980145] - start callback called 
+2017-11-15 12:08:52.5386 TRACE Database operation [1] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:325 
+2017-11-15 12:08:52.5556 TRACE Database operation [2] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt\Notifications\NotificationService.cs:57 
+2017-11-15 12:08:52.5967 INFO Navigation requested, current state: FirstNavigation 
+2017-11-15 12:08:52.6207 DEBUG Start loading module: WEB 
+2017-11-15 12:08:52.6377 DEBUG Resolving WEB module for group ExchangeClientGroup 
+2017-11-15 12:08:52.6507 TRACE NavigationModuleHandle..ctor - handle[49117947] created for WEB 
+2017-11-15 12:08:52.6637 TRACE NavigationModuleHandle.InitializeAsync - handle[49117947] - start foreground initialization 
+2017-11-15 12:08:52.6637 TRACE NavigationModuleHandle.InitializeAsync - handle[49117947] - initialization never started before, start real module initialization 
+2017-11-15 12:08:52.6887 INFO WEB: Initialization started 
+2017-11-15 12:08:52.7027 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.documentbrowser 
+2017-11-15 12:08:52.7147 DEBUG Assembly Hook: Assembly e-dapt.documentbrowser found in C:\Users\Guest-user\Documents\Debug-5\Modules\e-dapt.DocumentBrowser.dll 
+2017-11-15 12:08:52.7147 TRACE Request[25980145] - completion callback called 
+2017-11-15 12:08:52.7398 TRACE Request[25980145] - finish callback called 
+2017-11-15 12:08:52.7458 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.web.resources 
+2017-11-15 12:08:52.7458 INFO Request[25980145] removed from requests list 
+2017-11-15 12:08:52.7648 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.web.resources 
+2017-11-15 12:08:52.7763 INFO Total number of requests in list: 0 
+2017-11-15 12:08:52.7888 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.web.resources 
+2017-11-15 12:08:52.7888 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:08:52.8158 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.web.resources 
+2017-11-15 12:08:52.8328 TRACE Request[25980145] disposed 
+2017-11-15 12:08:52.8899 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.documentbrowser.resources 
+2017-11-15 12:08:52.9019 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.documentbrowser.resources 
+2017-11-15 12:08:52.9189 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.documentbrowser.resources 
+2017-11-15 12:08:52.9299 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.documentbrowser.resources 
+2017-11-15 12:08:52.9869 TRACE NavigationModuleHandle.GetInitializationResultAsync - handle[49117947] - start awaiting for initialization result 
+2017-11-15 12:08:52.9989 TRACE NavigationModuleHandle.GetInitializationResultAsync - handle[49117947] - awaiting for initialization result completed successfully 
+2017-11-15 12:08:53.0110 DEBUG Module retrieved 
+2017-11-15 12:08:53.0230 DEBUG No snapshot to show 
+2017-11-15 12:08:53.0540 TRACE WEB: Navigation started 
+2017-11-15 12:08:53.0540 TRACE Request[29456748] created 
+2017-11-15 12:08:53.0790 INFO Request[29456748] added to requests list 
+2017-11-15 12:08:53.0790 TRACE WEB: URL = maps51email:///?URL=https%3A%2F%2Fdev.e-dapt.net%3A4440%2Fedapt-static%2Findex.html%23%2Femail%3Flogin%3Dexadel1 
+2017-11-15 12:08:53.0950 INFO Total number of requests in list: 1 
+2017-11-15 12:08:53.1110 TRACE 0 substitution rule(s) created 
+2017-11-15 12:08:53.1240 TRACE Request[29456748] - header Content-Type set to value application/json 
+2017-11-15 12:08:53.1541 TRACE Request[29456748] - header Content-Length set to value 148 
+2017-11-15 12:08:53.1661 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-service/log/navigation/add 
+2017-11-15 12:08:53.1781 TRACE Request[29456748] - set request body: 
+{"sessionLogId":"80163","logEntries":[{"itemId":"54B84DB8-316D-5F4A-A523-59CB70E17160","type":"NAVIGATE","details":null,"timestamp":1510729733051}]} 
+2017-11-15 12:08:53.1781 TRACE Request[29456748] - start callback called 
+2017-11-15 12:08:53.3542 TRACE Database operation [3] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:253 
+2017-11-15 12:08:53.3717 TRACE Database operation [1] completed successfully 
+2017-11-15 12:08:53.3717 TRACE Database operation [4] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:112 
+2017-11-15 12:08:53.4483 TRACE Database operation [2] completed successfully 
+2017-11-15 12:08:53.4483 TRACE Database operation [5] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt\Notifications\NotificationService.cs:307 
+2017-11-15 12:08:53.4813 TRACE Database operation [6] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:52 
+2017-11-15 12:08:53.4993 TRACE Start background tasks 
+2017-11-15 12:08:53.5463 TRACE Start preload RDP 
+2017-11-15 12:08:53.5463 TRACE Request[29456748] - completion callback called 
+2017-11-15 12:08:53.5584 TRACE WEB - console: Creating Application Cache with manifest https://dev.e-dapt.net:4440/edapt-static/manifest.appcache on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:53.5759 DEBUG Resolving RDP module for group <NO GROUP> 
+2017-11-15 12:08:53.5864 TRACE Request[29456748] - finish callback called 
+2017-11-15 12:08:53.6044 TRACE WEB - console: Application Cache Checking event on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:53.6214 TRACE NavigationModuleHandle..ctor - handle[9249362] created for RDP 
+2017-11-15 12:08:53.6344 INFO Request[29456748] removed from requests list 
+2017-11-15 12:08:53.6689 TRACE NavigationModuleHandle.InitializeAsync - handle[9249362] - start background initialization 
+2017-11-15 12:08:53.6825 INFO Total number of requests in list: 0 
+2017-11-15 12:08:53.6965 TRACE NavigationModuleHandle.InitializeAsync - handle[9249362] - initialization never started before, start real module initialization 
+2017-11-15 12:08:53.7135 TRACE Response from https://dev.e-dapt.net:4440/edapt-service/log/navigation/add received 
+2017-11-15 12:08:53.7325 DEBUG RDP: start initialization 
+2017-11-15 12:08:53.7465 TRACE Request[29456748] disposed 
+2017-11-15 12:08:53.7645 DEBUG Assembly Hook: runtime failed to find assembly axinterop.mstsclib 
+2017-11-15 12:08:53.7995 DEBUG Assembly Hook: Assembly axinterop.mstsclib found in C:\Users\Guest-user\Documents\Debug-5\Modules\AxInterop.MSTSCLib.dll 
+2017-11-15 12:08:53.8286 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.rdp.resources 
+2017-11-15 12:08:53.8416 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.rdp.resources 
+2017-11-15 12:08:53.8596 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.rdp.resources 
+2017-11-15 12:08:53.8661 TRACE Request[53638904] created 
+2017-11-15 12:08:53.8661 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.rdp.resources 
+2017-11-15 12:08:53.8966 INFO Request[53638904] added to requests list 
+2017-11-15 12:08:53.9196 TRACE RDP: Initialize - start view model initialization 
+2017-11-15 12:08:53.9306 INFO Total number of requests in list: 1 
+2017-11-15 12:08:53.9477 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.rdp.resources 
+2017-11-15 12:08:53.9627 TRACE Request[53638904] - header Content-Type set to value application/json 
+2017-11-15 12:08:53.9792 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.rdp.resources 
+2017-11-15 12:08:53.9792 TRACE Database operation [3] completed successfully 
+2017-11-15 12:08:53.9957 TRACE Request[53638904] - header Content-Length set to value 51 
+2017-11-15 12:08:54.0117 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.rdp.resources 
+2017-11-15 12:08:54.0677 DEBUG Assembly Hook: runtime failed to find assembly e-dapt.rdp.resources 
+2017-11-15 12:08:54.0467 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:08:54.1188 TRACE Request[53638904] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:08:54.1088 TRACE Database operation [4] completed successfully 
+2017-11-15 12:08:54.1318 TRACE RDP: Initialize - finish view model initialization 
+2017-11-15 12:08:54.1318 TRACE Request[53638904] - start callback called 
+2017-11-15 12:08:54.1648 TRACE RDP: Initialize- start setting service info 
+2017-11-15 12:08:54.2009 TRACE Request[58440016] created 
+2017-11-15 12:08:54.2179 INFO Request[58440016] added to requests list 
+2017-11-15 12:08:54.2309 INFO Total number of requests in list: 2 
+2017-11-15 12:08:54.2309 TRACE Database operation [5] completed successfully 
+2017-11-15 12:08:54.2469 TRACE Request[58440016] - header Content-Type set to value application/json 
+2017-11-15 12:08:54.2769 TRACE Request[58440016] - header Content-Length set to value 0 
+2017-11-15 12:08:54.2889 TRACE Sending request to https://dev.e-dapt.net:4440/proxy/profile/getPassword 
+2017-11-15 12:08:54.3069 TRACE Request[58440016] - set request body: 
+ 
+2017-11-15 12:08:54.3209 TRACE Request[58440016] - start callback called 
+2017-11-15 12:08:54.3209 TRACE NavigationModuleHandle.GetInitializationResultAsync - handle[9249362] - start awaiting for initialization result 
+2017-11-15 12:08:54.3359 TRACE Database operation [6] completed successfully 
+2017-11-15 12:08:54.4781 TRACE JS Bridge: GetUserName called 
+2017-11-15 12:08:54.4781 INFO Frame loaded - URL https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.4911 TRACE JS Bridge: GetUserName returns exadel1 
+2017-11-15 12:08:54.5271 TRACE JS Bridge: GetUserEmail called 
+2017-11-15 12:08:54.5271 TRACE Navigation finished: hide loader, hide shapshot, remember current item to take screenshot from 
+2017-11-15 12:08:54.5271 TRACE WEB - console: Application Cache Downloading event on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.5461 TRACE JS Bridge: GetUserEmail returns exadel1@botf03.net 
+2017-11-15 12:08:54.5781 TRACE WEB - console: Application Cache Progress event (0 of 26) https://dev.e-dapt.net:4440/edapt-static/f003e76e6f9656c1b4339befb771cf7e.woff on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.5981 TRACE JS Bridge: GetNetworkAvailable called 
+2017-11-15 12:08:54.6122 TRACE WEB - console: Application Cache Progress event (1 of 26) https://dev.e-dapt.net:4440/edapt-static/e31fcf1885e371e19f5786c2bdfeae1b.ttf on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.6252 TRACE JS Bridge: NetworkAvailable returns True 
+2017-11-15 12:08:54.6392 TRACE WEB - console: Application Cache Progress event (2 of 26) https://dev.e-dapt.net:4440/edapt-static/df7b648ce5356ea1ebce435b3459fd60.ttf on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.6512 TRACE JS Bridge: GetProxyURL called 
+2017-11-15 12:08:54.6642 TRACE WEB - console: Application Cache Progress event (3 of 26) https://dev.e-dapt.net:4440/edapt-static/fe187c99fdda2cbaad911eb8191cf9f1.ttf on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.6642 TRACE JS Bridge: GetProxyURL returns https://dev.e-dapt.net:4440 
+2017-11-15 12:08:54.6892 TRACE WEB - console: Application Cache Progress event (4 of 26) https://dev.e-dapt.net:4440/edapt-static/894a2ede85a483bf9bedefd4db45cdb9.ttf on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.7012 TRACE JS Bridge: GetGlobalParameters called 
+2017-11-15 12:08:54.7132 TRACE WEB - console: Application Cache Progress event (5 of 26) https://dev.e-dapt.net:4440/edapt-static/557e203ccfb08ac0bc8544b6c89eed5d.eot on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.7322 TRACE JS Bridge: GetExtraHTTPHeaders called 
+2017-11-15 12:08:54.7322 TRACE WEB - console: Application Cache Progress event (6 of 26) https://dev.e-dapt.net:4440/edapt-static/b64c67c20f71429b3ff61c6c680bd038.svg on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.7633 TRACE WEB - console: Application Cache Progress event (7 of 26) https://dev.e-dapt.net:4440/edapt-static/46e48ce0628835f68a7369d0254e4283.ttf on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.7763 TRACE WEB - console: Application Cache Progress event (8 of 26) https://dev.e-dapt.net:4440/edapt-static/WEB-INF/jboss-web.xml on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.7883 TRACE WEB - console: Application Cache Error event: Resource fetch failed (404) https://dev.e-dapt.net:4440/edapt-static/WEB-INF/jboss-web.xml on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:08:54.7883 TRACE WEB - console: WebContentBridge updated with event emitter API defined. on line 138 in about:blank 
+2017-11-15 12:08:54.8413 TRACE WEB - console: initDB: 9.4453125ms on line 1 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:08:59.7648 TRACE Request[53638904] - completion callback called 
+2017-11-15 12:08:59.7898 TRACE Request[53638904] - finish callback called 
+2017-11-15 12:08:59.8134 INFO Request[53638904] removed from requests list 
+2017-11-15 12:08:59.8274 INFO Total number of requests in list: 1 
+2017-11-15 12:08:59.8414 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:08:59.8554 TRACE Request[53638904] disposed 
+2017-11-15 12:09:00.3784 TRACE Request[58440016] - completion callback called 
+2017-11-15 12:09:00.4020 TRACE Request[58440016] - finish callback called 
+2017-11-15 12:09:00.4200 INFO Request[58440016] removed from requests list 
+2017-11-15 12:09:00.4340 INFO Total number of requests in list: 0 
+2017-11-15 12:09:00.4480 TRACE Response from https://dev.e-dapt.net:4440/proxy/profile/getPassword received 
+2017-11-15 12:09:00.4480 TRACE Request[58440016] disposed 
+2017-11-15 12:09:00.4740 DEBUG Assembly Hook: runtime failed to find assembly interop.mstsclib 
+2017-11-15 12:09:00.4850 DEBUG Assembly Hook: Assembly interop.mstsclib found in C:\Users\Guest-user\Documents\Debug-5\Modules\Interop.MSTSCLib.dll 
+2017-11-15 12:09:00.5090 TRACE RDP: Initialize - finish setting service info 
+2017-11-15 12:09:00.5090 TRACE RDP: Initialize - start connection 
+2017-11-15 12:09:00.8698 TRACE Request[803548] created 
+2017-11-15 12:09:00.8863 INFO Request[803548] added to requests list 
+2017-11-15 12:09:00.8998 INFO Total number of requests in list: 1 
+2017-11-15 12:09:00.9133 TRACE Request[803548] - header Content-Type set to value application/json 
+2017-11-15 12:09:00.9314 TRACE Request[803548] - header Content-Length set to value 51 
+2017-11-15 12:09:00.9454 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:00.9594 TRACE Request[803548] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:00.9594 TRACE Request[803548] - start callback called 
+2017-11-15 12:09:01.5282 TRACE Request[803548] - completion callback called 
+2017-11-15 12:09:01.5432 TRACE Request[803548] - finish callback called 
+2017-11-15 12:09:01.5562 INFO Request[803548] removed from requests list 
+2017-11-15 12:09:01.5562 INFO Total number of requests in list: 0 
+2017-11-15 12:09:01.5803 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:01.6183 TRACE Request[803548] disposed 
+2017-11-15 12:09:02.4980 TRACE WEB - console: [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object] on line 5 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:02.5194 TRACE JS Bridge: InsertOrUpdateSpotlightItems called 
+2017-11-15 12:09:02.5194 TRACE JS Bridge: RemoveSpotlightItems called 
+2017-11-15 12:09:02.5424 TRACE Database operation [7] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.5424 TRACE Database operation [7] completed successfully 
+2017-11-15 12:09:02.5534 TRACE Database operation [8] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:229 
+2017-11-15 12:09:02.5534 TRACE Database operation [9] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.5944 TRACE Database operation [10] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:229 
+2017-11-15 12:09:02.6029 TRACE Database operation [8] completed successfully 
+2017-11-15 12:09:02.6029 TRACE Database operation [11] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.6214 TRACE Database operation [12] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:229 
+2017-11-15 12:09:02.6394 TRACE Database operation [9] completed successfully 
+2017-11-15 12:09:02.6504 TRACE Database operation [13] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.6655 TRACE Request[12615304] created 
+2017-11-15 12:09:02.6925 TRACE Database operation [14] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.7025 TRACE Database operation [10] completed successfully 
+2017-11-15 12:09:02.7025 INFO Request[12615304] added to requests list 
+2017-11-15 12:09:02.7205 TRACE Database operation [15] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.7385 TRACE Database operation [11] completed successfully 
+2017-11-15 12:09:02.7475 INFO Total number of requests in list: 1 
+2017-11-15 12:09:02.7605 TRACE Database operation [16] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.7865 TRACE Request[12615304] - header Content-Type set to value application/json 
+2017-11-15 12:09:02.7986 TRACE Database operation [12] completed successfully 
+2017-11-15 12:09:02.8036 TRACE Database operation [17] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.8036 TRACE Request[12615304] - header Content-Length set to value 51 
+2017-11-15 12:09:02.8346 TRACE Database operation [13] completed successfully 
+2017-11-15 12:09:02.8346 TRACE Database operation [18] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.8566 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:02.8816 TRACE Database operation [19] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.8816 TRACE Database operation [14] completed successfully 
+2017-11-15 12:09:02.8971 TRACE Request[12615304] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:02.8971 TRACE Database operation [20] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.9337 TRACE Request[12615304] - start callback called 
+2017-11-15 12:09:02.9477 TRACE Database operation [15] completed successfully 
+2017-11-15 12:09:02.9477 TRACE Database operation [21] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:02.9907 TRACE Database operation [22] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.0062 TRACE Database operation [23] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.0062 TRACE Database operation [16] completed successfully 
+2017-11-15 12:09:03.0062 TRACE Database operation [24] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.0417 TRACE Database operation [25] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.0537 TRACE Database operation [17] completed successfully 
+2017-11-15 12:09:03.0537 TRACE Database operation [26] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.0808 TRACE Database operation [27] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.0943 TRACE Database operation [28] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.0943 TRACE Database operation [18] completed successfully 
+2017-11-15 12:09:03.1073 TRACE Database operation [29] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.1308 TRACE Database operation [30] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.1428 TRACE Database operation [31] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.1428 TRACE Database operation [19] completed successfully 
+2017-11-15 12:09:03.1558 TRACE Database operation [32] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.1799 TRACE Database operation [33] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.1799 TRACE Database operation [20] completed successfully 
+2017-11-15 12:09:03.1944 TRACE Database operation [34] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.2199 TRACE Database operation [35] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.2319 TRACE Database operation [21] completed successfully 
+2017-11-15 12:09:03.2319 TRACE Database operation [36] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.2589 TRACE Database operation [37] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.2589 TRACE Request[12615304] - completion callback called 
+2017-11-15 12:09:03.2759 TRACE Database operation [38] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.2759 TRACE Database operation [22] completed successfully 
+2017-11-15 12:09:03.2889 TRACE Request[12615304] - finish callback called 
+2017-11-15 12:09:03.2889 TRACE Database operation [39] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.3389 TRACE Database operation [40] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.3389 TRACE Database operation [23] completed successfully 
+2017-11-15 12:09:03.3530 TRACE Database operation [41] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.3800 TRACE Database operation [42] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.3820 INFO Request[12615304] removed from requests list 
+2017-11-15 12:09:03.3820 TRACE Database operation [24] completed successfully 
+2017-11-15 12:09:03.3820 TRACE Database operation [43] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.4065 INFO Total number of requests in list: 0 
+2017-11-15 12:09:03.4340 TRACE Database operation [44] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.4440 TRACE Database operation [25] completed successfully 
+2017-11-15 12:09:03.4440 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:03.4440 TRACE Database operation [45] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.4830 TRACE Request[12615304] disposed 
+2017-11-15 12:09:03.4971 TRACE Database operation [26] completed successfully 
+2017-11-15 12:09:03.4971 TRACE Database operation [46] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.5340 TRACE Database operation [47] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.5450 TRACE Database operation [27] completed successfully 
+2017-11-15 12:09:03.5450 TRACE Database operation [48] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.5730 TRACE Database operation [49] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.5850 TRACE Database operation [50] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.5850 TRACE Database operation [28] completed successfully 
+2017-11-15 12:09:03.5850 TRACE Database operation [51] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.6240 TRACE Database operation [52] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.6360 TRACE Database operation [53] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.6360 TRACE Database operation [29] completed successfully 
+2017-11-15 12:09:03.6491 TRACE Database operation [54] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.6741 TRACE Database operation [55] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.6831 TRACE Database operation [56] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.6831 TRACE Database operation [30] completed successfully 
+2017-11-15 12:09:03.6986 TRACE Database operation [57] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.7221 TRACE Database operation [58] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.7351 TRACE Database operation [59] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.7351 TRACE Database operation [31] completed successfully 
+2017-11-15 12:09:03.7471 TRACE Database operation [60] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.7711 TRACE Database operation [61] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.7851 TRACE Database operation [62] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.7851 TRACE Database operation [32] completed successfully 
+2017-11-15 12:09:03.7977 TRACE Database operation [63] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.8210 TRACE Database operation [64] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.8210 TRACE Database operation [33] completed successfully 
+2017-11-15 12:09:03.8210 TRACE Database operation [65] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.8580 TRACE Database operation [66] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.8700 TRACE Database operation [67] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.8700 TRACE Database operation [34] completed successfully 
+2017-11-15 12:09:03.8840 TRACE Database operation [68] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.9080 TRACE Database operation [69] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.9208 TRACE Database operation [70] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.9208 TRACE Database operation [35] completed successfully 
+2017-11-15 12:09:03.9328 TRACE Database operation [71] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.9578 TRACE Database operation [72] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.9688 TRACE Database operation [73] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:03.9688 TRACE Database operation [36] completed successfully 
+2017-11-15 12:09:03.9868 TRACE Database operation [74] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.0143 TRACE Database operation [75] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.0243 TRACE Database operation [76] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.0243 TRACE Database operation [37] completed successfully 
+2017-11-15 12:09:04.0393 TRACE Database operation [77] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.0664 TRACE Database operation [78] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.0784 TRACE Database operation [79] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.0784 TRACE Database operation [38] completed successfully 
+2017-11-15 12:09:04.0924 TRACE Database operation [80] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.1179 TRACE Database operation [81] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.1319 TRACE Database operation [82] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.1319 TRACE Database operation [39] completed successfully 
+2017-11-15 12:09:04.1319 TRACE Database operation [83] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.1700 TRACE Database operation [84] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.1820 TRACE Database operation [85] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.1820 TRACE Database operation [40] completed successfully 
+2017-11-15 12:09:04.1965 TRACE Database operation [86] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.2215 TRACE Database operation [87] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.2345 TRACE Database operation [41] completed successfully 
+2017-11-15 12:09:04.2345 TRACE Database operation [88] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.2605 TRACE Database operation [89] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.2725 TRACE Database operation [90] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.2725 TRACE Database operation [42] completed successfully 
+2017-11-15 12:09:04.2875 TRACE Database operation [91] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.3106 TRACE Database operation [92] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.3236 TRACE Database operation [43] completed successfully 
+2017-11-15 12:09:04.3236 TRACE Database operation [93] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.3506 TRACE Database operation [94] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.3506 TRACE Database operation [95] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.3656 TRACE Database operation [44] completed successfully 
+2017-11-15 12:09:04.3656 TRACE Database operation [96] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.4036 TRACE Database operation [97] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.4156 TRACE Database operation [98] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.4156 TRACE Database operation [45] completed successfully 
+2017-11-15 12:09:04.4306 TRACE Database operation [99] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.4547 TRACE Database operation [100] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.4667 TRACE Database operation [101] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.4667 TRACE Database operation [46] completed successfully 
+2017-11-15 12:09:04.4817 TRACE Database operation [102] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.5072 TRACE Database operation [103] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.5072 TRACE Request[24940115] created 
+2017-11-15 12:09:04.5072 TRACE Database operation [104] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.5072 TRACE Database operation [47] completed successfully 
+2017-11-15 12:09:04.5347 INFO Request[24940115] added to requests list 
+2017-11-15 12:09:04.5477 TRACE Database operation [105] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.5717 INFO Total number of requests in list: 1 
+2017-11-15 12:09:04.5848 TRACE Database operation [48] completed successfully 
+2017-11-15 12:09:04.5848 TRACE Database operation [106] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.6008 TRACE Request[24940115] - header Content-Type set to value application/json 
+2017-11-15 12:09:04.6248 TRACE Database operation [107] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.6368 TRACE Database operation [49] completed successfully 
+2017-11-15 12:09:04.6368 TRACE Request[24940115] - header Content-Length set to value 51 
+2017-11-15 12:09:04.6518 TRACE Database operation [108] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.6758 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:04.6908 TRACE Database operation [50] completed successfully 
+2017-11-15 12:09:04.6908 TRACE Database operation [109] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.7038 TRACE Request[24940115] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:04.7279 TRACE Database operation [110] queued from C:\Users\user\Projects\51maps\e-dapt\WindowsApp\e-dapt\e-dapt.Core\Services\Search\SearchService.cs:212 
+2017-11-15 12:09:04.7429 TRACE Request[24940115] - start callback called 
+2017-11-15 12:09:04.7429 TRACE Database operation [51] completed successfully 
+2017-11-15 12:09:04.8021 TRACE Database operation [52] completed successfully 
+2017-11-15 12:09:04.8379 TRACE Database operation [53] completed successfully 
+2017-11-15 12:09:04.8750 TRACE Database operation [54] completed successfully 
+2017-11-15 12:09:04.9098 TRACE Database operation [55] completed successfully 
+2017-11-15 12:09:04.9444 TRACE Database operation [56] completed successfully 
+2017-11-15 12:09:04.9811 TRACE Database operation [57] completed successfully 
+2017-11-15 12:09:05.0073 TRACE Request[24940115] - completion callback called 
+2017-11-15 12:09:05.0073 TRACE Database operation [58] completed successfully 
+2017-11-15 12:09:05.0073 TRACE Request[24940115] - finish callback called 
+2017-11-15 12:09:05.0463 INFO Request[24940115] removed from requests list 
+2017-11-15 12:09:05.0603 INFO Total number of requests in list: 0 
+2017-11-15 12:09:05.0603 TRACE Database operation [59] completed successfully 
+2017-11-15 12:09:05.0733 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:05.0988 TRACE Request[24940115] disposed 
+2017-11-15 12:09:05.1124 TRACE Database operation [60] completed successfully 
+2017-11-15 12:09:05.1489 TRACE Database operation [61] completed successfully 
+2017-11-15 12:09:05.1835 TRACE Database operation [62] completed successfully 
+2017-11-15 12:09:05.2203 TRACE Database operation [63] completed successfully 
+2017-11-15 12:09:05.2583 TRACE Database operation [64] completed successfully 
+2017-11-15 12:09:05.2942 TRACE Database operation [65] completed successfully 
+2017-11-15 12:09:05.3280 TRACE Database operation [66] completed successfully 
+2017-11-15 12:09:05.3641 TRACE Database operation [67] completed successfully 
+2017-11-15 12:09:05.4021 TRACE Database operation [68] completed successfully 
+2017-11-15 12:09:05.4384 TRACE Database operation [69] completed successfully 
+2017-11-15 12:09:05.4734 TRACE Database operation [70] completed successfully 
+2017-11-15 12:09:05.5189 TRACE Database operation [71] completed successfully 
+2017-11-15 12:09:05.5560 TRACE Database operation [72] completed successfully 
+2017-11-15 12:09:05.5910 TRACE Database operation [73] completed successfully 
+2017-11-15 12:09:05.6258 TRACE Database operation [74] completed successfully 
+2017-11-15 12:09:05.6629 TRACE Database operation [75] completed successfully 
+2017-11-15 12:09:05.6999 TRACE Database operation [76] completed successfully 
+2017-11-15 12:09:05.7359 TRACE Database operation [77] completed successfully 
+2017-11-15 12:09:05.7741 TRACE Database operation [78] completed successfully 
+2017-11-15 12:09:05.8116 TRACE Database operation [79] completed successfully 
+2017-11-15 12:09:05.8458 TRACE Database operation [80] completed successfully 
+2017-11-15 12:09:05.8833 TRACE Database operation [81] completed successfully 
+2017-11-15 12:09:05.9208 TRACE Database operation [82] completed successfully 
+2017-11-15 12:09:05.9574 TRACE Database operation [83] completed successfully 
+2017-11-15 12:09:05.9954 TRACE Database operation [84] completed successfully 
+2017-11-15 12:09:06.0414 TRACE Database operation [85] completed successfully 
+2017-11-15 12:09:06.0784 TRACE Database operation [86] completed successfully 
+2017-11-15 12:09:06.1150 TRACE Database operation [87] completed successfully 
+2017-11-15 12:09:06.1240 TRACE Request[65330082] created 
+2017-11-15 12:09:06.1410 INFO Request[65330082] added to requests list 
+2017-11-15 12:09:06.1550 INFO Total number of requests in list: 1 
+2017-11-15 12:09:06.1550 TRACE Database operation [88] completed successfully 
+2017-11-15 12:09:06.1660 TRACE Request[65330082] - header Content-Type set to value application/json 
+2017-11-15 12:09:06.1920 TRACE Request[65330082] - header Content-Length set to value 51 
+2017-11-15 12:09:06.2061 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:06.2061 TRACE Database operation [89] completed successfully 
+2017-11-15 12:09:06.2176 TRACE Request[65330082] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:06.2436 TRACE Request[65330082] - start callback called 
+2017-11-15 12:09:06.2436 TRACE Database operation [90] completed successfully 
+2017-11-15 12:09:06.2924 TRACE Database operation [91] completed successfully 
+2017-11-15 12:09:06.3300 TRACE Database operation [92] completed successfully 
+2017-11-15 12:09:06.3647 TRACE Database operation [93] completed successfully 
+2017-11-15 12:09:06.4043 TRACE Database operation [94] completed successfully 
+2017-11-15 12:09:06.4458 TRACE Database operation [95] completed successfully 
+2017-11-15 12:09:06.4808 TRACE Database operation [96] completed successfully 
+2017-11-15 12:09:06.5167 TRACE Database operation [97] completed successfully 
+2017-11-15 12:09:06.5527 TRACE Database operation [98] completed successfully 
+2017-11-15 12:09:06.5886 TRACE Database operation [99] completed successfully 
+2017-11-15 12:09:06.6237 TRACE Database operation [100] completed successfully 
+2017-11-15 12:09:06.6614 TRACE Database operation [101] completed successfully 
+2017-11-15 12:09:06.7380 TRACE Request[65330082] - completion callback called 
+2017-11-15 12:09:06.7740 TRACE Request[65330082] - finish callback called 
+2017-11-15 12:09:06.8120 INFO Request[65330082] removed from requests list 
+2017-11-15 12:09:06.7910 TRACE Database operation [102] completed successfully 
+2017-11-15 12:09:06.8300 INFO Total number of requests in list: 0 
+2017-11-15 12:09:06.9026 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:06.9026 TRACE Database operation [103] completed successfully 
+2017-11-15 12:09:06.9301 TRACE Request[65330082] disposed 
+2017-11-15 12:09:06.9826 TRACE Database operation [104] completed successfully 
+2017-11-15 12:09:07.1532 TRACE Database operation [105] completed successfully 
+2017-11-15 12:09:07.2031 TRACE Database operation [106] completed successfully 
+2017-11-15 12:09:07.2372 TRACE Database operation [107] completed successfully 
+2017-11-15 12:09:07.2723 TRACE Database operation [108] completed successfully 
+2017-11-15 12:09:07.3109 TRACE Database operation [109] completed successfully 
+2017-11-15 12:09:07.3560 TRACE Database operation [110] completed successfully 
+2017-11-15 12:09:07.9775 TRACE Request[2649323] created 
+2017-11-15 12:09:08.0060 INFO Request[2649323] added to requests list 
+2017-11-15 12:09:08.0200 INFO Total number of requests in list: 1 
+2017-11-15 12:09:08.0330 TRACE Request[2649323] - header Content-Type set to value application/json 
+2017-11-15 12:09:08.0460 TRACE Request[2649323] - header Content-Length set to value 51 
+2017-11-15 12:09:08.0580 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:08.0701 TRACE Request[2649323] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:08.0701 TRACE Request[2649323] - start callback called 
+2017-11-15 12:09:08.5945 TRACE Request[2649323] - completion callback called 
+2017-11-15 12:09:08.6180 TRACE Request[2649323] - finish callback called 
+2017-11-15 12:09:08.6430 INFO Request[2649323] removed from requests list 
+2017-11-15 12:09:08.6650 INFO Total number of requests in list: 0 
+2017-11-15 12:09:08.6650 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:08.6896 TRACE Request[2649323] disposed 
+2017-11-15 12:09:09.4814 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.4984 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.5149 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.5290 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.5420 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.5560 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.5690 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.5690 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.5965 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.6100 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.6250 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.6420 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.6550 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.6721 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.6871 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.7006 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.7137 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.7137 TRACE Request[22639330] created 
+2017-11-15 12:09:09.7277 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.7438 INFO Request[22639330] added to requests list 
+2017-11-15 12:09:09.7578 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.7578 INFO Total number of requests in list: 1 
+2017-11-15 12:09:09.7853 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.7983 TRACE Request[22639330] - header Content-Type set to value application/json 
+2017-11-15 12:09:09.8123 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.8243 TRACE Request[22639330] - header Content-Length set to value 51 
+2017-11-15 12:09:09.8373 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.8373 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:09.8633 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.8754 TRACE Request[22639330] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:09.8884 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.9014 TRACE Request[22639330] - start callback called 
+2017-11-15 12:09:09.9144 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.9394 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.9514 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.9644 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.9767 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:09.9767 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.0021 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.0141 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.0271 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.0391 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.0391 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.0651 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.0772 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.0902 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.1032 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.1032 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.1282 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.1412 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.1542 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.1672 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.1782 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.1782 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.2042 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.2173 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.2173 TRACE Request[22639330] - completion callback called 
+2017-11-15 12:09:10.2293 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.2413 TRACE Request[22639330] - finish callback called 
+2017-11-15 12:09:10.2413 TRACE WEB - console: update on line 9 in https://dev.e-dapt.net:4440/edapt-static/app.056746d074ff67988de7.js 
+2017-11-15 12:09:10.2643 INFO Request[22639330] removed from requests list 
+2017-11-15 12:09:10.2763 TRACE WEB - console: Uncaught (in promise) System.InvalidOperationException: Could not execute method: cancelAllLocalSystemNotifications()  ---> System.Reflection.TargetInvocationException: Адресат вызова создал исключение. ---> e_dapt.Web.PromiseRejectedException: Выдано исключение типа "e_dapt.Web.PromiseRejectedException".
+   в e_dapt.Web.JavascriptBridge.CancelAllLocalSystemNotifications()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   в System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   в System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   в System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   в CefSharp.Internals.JavascriptObjectRepository.TryCallMethod(Int64 objectId, String name, Object[] parameters, Object& result, String& exception) в C:\Users\user\Desktop\CEF\CefSharp59\CefSharp\Internals\JavascriptObjectRepository.cs:строка 171
+   --- Конец трассировки внутреннего стека исключений ---
+   в CefSharp.Internals.JavascriptObjectRepository.TryCallMethod(Int64 objectId, String name, Object[] parameters, Object& result, String& exception) в C:\Users\user\Desktop\CEF\CefSharp59\CefSharp\Internals\JavascriptObjectRepository.cs:строка 202 on line 0 in https://dev.e-dapt.net:4440/edapt-static/index.html#/email?login=exadel1 
+2017-11-15 12:09:10.2883 INFO Total number of requests in list: 0 
+2017-11-15 12:09:10.3151 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:10.3281 TRACE Request[22639330] disposed 
+2017-11-15 12:09:11.3553 TRACE Request[29112358] created 
+2017-11-15 12:09:11.3813 INFO Request[29112358] added to requests list 
+2017-11-15 12:09:11.4083 INFO Total number of requests in list: 1 
+2017-11-15 12:09:11.4284 TRACE Request[29112358] - header Content-Type set to value application/json 
+2017-11-15 12:09:11.4284 TRACE Request[29112358] - header Content-Length set to value 51 
+2017-11-15 12:09:11.4544 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:11.4674 TRACE Request[29112358] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:11.4804 TRACE Request[29112358] - start callback called 
+2017-11-15 12:09:12.5708 TRACE Request[29112358] - completion callback called 
+2017-11-15 12:09:12.5978 TRACE Request[29112358] - finish callback called 
+2017-11-15 12:09:12.6243 INFO Request[29112358] removed from requests list 
+2017-11-15 12:09:12.6373 INFO Total number of requests in list: 0 
+2017-11-15 12:09:12.6503 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:12.6633 TRACE Request[29112358] disposed 
+2017-11-15 12:09:13.6895 TRACE Request[64631382] created 
+2017-11-15 12:09:13.7155 INFO Request[64631382] added to requests list 
+2017-11-15 12:09:13.7426 INFO Total number of requests in list: 1 
+2017-11-15 12:09:13.7656 TRACE Request[64631382] - header Content-Type set to value application/json 
+2017-11-15 12:09:13.7826 TRACE Request[64631382] - header Content-Length set to value 51 
+2017-11-15 12:09:13.7976 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:13.8111 TRACE Request[64631382] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:13.8244 TRACE Request[64631382] - start callback called 
+2017-11-15 12:09:14.2137 TRACE Request[64631382] - completion callback called 
+2017-11-15 12:09:14.2393 TRACE Request[64631382] - finish callback called 
+2017-11-15 12:09:14.2653 INFO Request[64631382] removed from requests list 
+2017-11-15 12:09:14.2833 INFO Total number of requests in list: 0 
+2017-11-15 12:09:14.3003 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:14.3258 TRACE Request[64631382] disposed 
+2017-11-15 12:09:15.3518 TRACE Request[20318803] created 
+2017-11-15 12:09:15.3758 INFO Request[20318803] added to requests list 
+2017-11-15 12:09:15.3928 INFO Total number of requests in list: 1 
+2017-11-15 12:09:15.4079 TRACE Request[20318803] - header Content-Type set to value application/json 
+2017-11-15 12:09:15.4249 TRACE Request[20318803] - header Content-Length set to value 51 
+2017-11-15 12:09:15.4404 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:15.4554 TRACE Request[20318803] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:15.4704 TRACE Request[20318803] - start callback called 
+2017-11-15 12:09:15.7279 TRACE Request[20318803] - completion callback called 
+2017-11-15 12:09:15.7512 TRACE Request[20318803] - finish callback called 
+2017-11-15 12:09:15.7742 INFO Request[20318803] removed from requests list 
+2017-11-15 12:09:15.7742 INFO Total number of requests in list: 0 
+2017-11-15 12:09:15.7992 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:15.8112 TRACE Request[20318803] disposed 
+2017-11-15 12:09:16.8371 TRACE Request[56720318] created 
+2017-11-15 12:09:16.8600 INFO Request[56720318] added to requests list 
+2017-11-15 12:09:16.8830 INFO Total number of requests in list: 1 
+2017-11-15 12:09:16.8830 TRACE Request[56720318] - header Content-Type set to value application/json 
+2017-11-15 12:09:16.9061 TRACE Request[56720318] - header Content-Length set to value 51 
+2017-11-15 12:09:16.9181 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:16.9296 TRACE Request[56720318] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:16.9296 TRACE Request[56720318] - start callback called 
+2017-11-15 12:09:17.2299 TRACE Request[56720318] - completion callback called 
+2017-11-15 12:09:17.2536 TRACE Request[56720318] - finish callback called 
+2017-11-15 12:09:17.2776 INFO Request[56720318] removed from requests list 
+2017-11-15 12:09:17.3026 INFO Total number of requests in list: 0 
+2017-11-15 12:09:17.3146 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:17.3267 TRACE Request[56720318] disposed 
+2017-11-15 12:09:18.3512 TRACE Request[2911202] created 
+2017-11-15 12:09:18.3752 INFO Request[2911202] added to requests list 
+2017-11-15 12:09:18.3912 INFO Total number of requests in list: 1 
+2017-11-15 12:09:18.4032 TRACE Request[2911202] - header Content-Type set to value application/json 
+2017-11-15 12:09:18.4162 TRACE Request[2911202] - header Content-Length set to value 51 
+2017-11-15 12:09:18.4292 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:18.4292 TRACE Request[2911202] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:18.4529 TRACE Request[2911202] - start callback called 
+2017-11-15 12:09:18.8279 TRACE Request[2911202] - completion callback called 
+2017-11-15 12:09:18.8510 TRACE Request[2911202] - finish callback called 
+2017-11-15 12:09:18.8750 INFO Request[2911202] removed from requests list 
+2017-11-15 12:09:18.8950 INFO Total number of requests in list: 0 
+2017-11-15 12:09:18.9080 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:18.9210 TRACE Request[2911202] disposed 
+2017-11-15 12:09:19.9452 TRACE Request[8721811] created 
+2017-11-15 12:09:19.9682 INFO Request[8721811] added to requests list 
+2017-11-15 12:09:19.9822 INFO Total number of requests in list: 1 
+2017-11-15 12:09:19.9942 TRACE Request[8721811] - header Content-Type set to value application/json 
+2017-11-15 12:09:20.0062 TRACE Request[8721811] - header Content-Length set to value 51 
+2017-11-15 12:09:20.0062 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:20.0353 TRACE Request[8721811] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:20.0478 TRACE Request[8721811] - start callback called 
+2017-11-15 12:09:20.3971 TRACE Request[8721811] - completion callback called 
+2017-11-15 12:09:20.4211 TRACE Request[8721811] - finish callback called 
+2017-11-15 12:09:20.4444 INFO Request[8721811] removed from requests list 
+2017-11-15 12:09:20.4604 INFO Total number of requests in list: 0 
+2017-11-15 12:09:20.4604 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:20.4844 TRACE Request[8721811] disposed 
+2017-11-15 12:09:21.5064 TRACE Request[66540731] created 
+2017-11-15 12:09:21.5320 INFO Request[66540731] added to requests list 
+2017-11-15 12:09:21.5455 INFO Total number of requests in list: 1 
+2017-11-15 12:09:21.5585 TRACE Request[66540731] - header Content-Type set to value application/json 
+2017-11-15 12:09:21.5715 TRACE Request[66540731] - header Content-Length set to value 51 
+2017-11-15 12:09:21.5715 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:21.5965 TRACE Request[66540731] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:21.6085 TRACE Request[66540731] - start callback called 
+2017-11-15 12:09:21.7904 TRACE Request[66540731] - completion callback called 
+2017-11-15 12:09:21.8142 TRACE Request[66540731] - finish callback called 
+2017-11-15 12:09:21.8357 INFO Request[66540731] removed from requests list 
+2017-11-15 12:09:21.8357 INFO Total number of requests in list: 0 
+2017-11-15 12:09:21.8630 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:21.8739 TRACE Request[66540731] disposed 
+2017-11-15 12:09:22.8987 TRACE Request[51013121] created 
+2017-11-15 12:09:22.9217 INFO Request[51013121] added to requests list 
+2017-11-15 12:09:22.9438 INFO Total number of requests in list: 1 
+2017-11-15 12:09:22.9438 TRACE Request[51013121] - header Content-Type set to value application/json 
+2017-11-15 12:09:22.9703 TRACE Request[51013121] - header Content-Length set to value 51 
+2017-11-15 12:09:22.9823 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:22.9933 TRACE Request[51013121] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:22.9933 TRACE Request[51013121] - start callback called 
+2017-11-15 12:09:23.1739 TRACE Request[51013121] - completion callback called 
+2017-11-15 12:09:23.1979 TRACE Request[51013121] - finish callback called 
+2017-11-15 12:09:23.2209 INFO Request[51013121] removed from requests list 
+2017-11-15 12:09:23.2444 INFO Total number of requests in list: 0 
+2017-11-15 12:09:23.2679 TRACE Response from https://dev.e-dapt.net:4440/edapt-pubsub/getMessages received 
+2017-11-15 12:09:23.2910 TRACE Request[51013121] disposed 
+2017-11-15 12:09:24.3230 TRACE Request[16718695] created 
+2017-11-15 12:09:24.3465 INFO Request[16718695] added to requests list 
+2017-11-15 12:09:24.3735 INFO Total number of requests in list: 1 
+2017-11-15 12:09:24.3905 TRACE Request[16718695] - header Content-Type set to value application/json 
+2017-11-15 12:09:24.4038 TRACE Request[16718695] - header Content-Length set to value 51 
+2017-11-15 12:09:24.4168 TRACE Sending request to https://dev.e-dapt.net:4440/edapt-pubsub/getMessages 
+2017-11-15 12:09:24.4308 TRACE Request[16718695] - set request body: 
+{"clientId":"8788c29d-a8e5-4d21-8284-adb524c6f87e"} 
+2017-11-15 12:09:24.4443 TRACE Request[16718695] - start callback called 

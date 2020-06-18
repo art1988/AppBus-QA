@@ -1,0 +1,37 @@
+Bug /Issue report template:
+
+Title description need to be short clear & easy to understand:
+
+          a) Project name(Version) : Functional / (example:Screen/ Element/ Action/Flow step validation short description)
+    
+2. Pre Reqs:
+
+         a) Build: Branch? Stage? Master? Prod?
+         b) Environment:(QA, DEV, Stage, PROD ?
+         c) Devices need to be tested: ( iphone, ipad, etc)
+         d) Credentials: (  for test environment,  or  customer/Support case, etc)
+         e) Other: (special/corner case, customer issue or special device info &Provider)
+         f) Link to : (Spec/Design, Screenshots &Test plan doc etc..)
+    
+3. Steps to reproduce issue (example)
+
+        a). Install support app ( or step to get app on device before test. from pre-reqs shown app installed etc..)
+        b). Login into the app using valid iCloud credentials ( or in pre-reqs mention about installed and loved in with credentials)
+        c). Provide steps ( from the test starts, not necessary add all tests if in pre-reqs said starts from page/screen etc)
+        d). Expected screen appeared validation after each step to execute ( at some point verify performance if open took a while..and need to report it)
+        e). Verify required step can be executed ( all required functions available and may tested)
+        f). Verify all elements / menu appeared on required screen
+        g). Verify all required messages can be visible based on requirements
+        h). final step complete 
+  
+    4. Links to related test cases or issues (if any related from test run or if any related issues)
+       
+        a). Link to test case related ( negative, error validation, )
+        b). Link to specific Customer support "bug" or "request"
+   
+5. Expected Result
+
+        a). Clear explanation of expected results
+        b). Attach a screenshot or link to doc/requirements with detailed description of "pass criteria"
+
+6. Attach screenshots (if UI) and as much as possible info (server logs, client logs( web. mobile etc), DB, error log etc)
